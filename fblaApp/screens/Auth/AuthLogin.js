@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image, Dimensions, TextInput, KeyboardAvoidingView } from 'react-native';
-import logo from 'C:/Sahil/Mobile App Dev/FBLA-MobileAppDev2020/fblaApp/assets/images/fbla-logo.png';
+import logo from '../../assets/images/fbla-logo.png';
 import { FormInput, FormValidationMessage, SocialIcon, Row, Header, Icon } from 'react-native-elements';
 import { Form, Item, Input, Label, Button } from 'native-base';
 
@@ -12,7 +12,7 @@ const SCREEN_HEIGHT = Dimensions.get('window').height;
 export default class AuthLogin extends React.Component {
     render() {
         return (
-                
+
         <KeyboardAvoidingView style = {{
           flex:1,
           width:SCREEN_WIDTH,
@@ -22,7 +22,7 @@ export default class AuthLogin extends React.Component {
           backgroundColor: 'rgb(255,255,255)'
         }}>
             <Header
-            
+
             outerContainerStyles={{ zIndex: 1, height:90, borderBottomColor:'white'}}
             backgroundColor='rgb(255,255,255)'
             innerContainerStyles = {{alignItems: 'center'}}
@@ -30,16 +30,16 @@ export default class AuthLogin extends React.Component {
             <Button transparent style = {{ justifyContent: 'flex-start', alignItems: 'center', width:55, marginLeft: 10, marginTop: 40}} onPress={() => this.props.navigation.navigate('AuthDecision')}>
               <Icon style = {{height:25, width:25}} name = 'ios-arrow-back' type='ionicon' color='black' />
             </Button>
-            } 
+            }
             containerStyle={{
               justifyContent: 'space-around',
-            }} 
-            />     
+            }}
+            />
             <View style = {{alignItems: 'center', justifyContent: 'center', marginTop: 16, marginBottom: 60}}>
                 <Image source={logo} style={{
                     width: 230,
                     height: 230,
-                    
+
                     resizeMode: 'contain'
                 }} />
             </View>
@@ -67,8 +67,8 @@ export default class AuthLogin extends React.Component {
                         }}>   EMAIL
                         </Text>
 
-                        
-                        <FormInput 
+
+                        <FormInput
                             style={{
                                 fontSize: 16,
                                 marginHorizontal: 10,
@@ -77,7 +77,7 @@ export default class AuthLogin extends React.Component {
                             }}
                             placeholder={'Enter email'}
                             placeholderTextColor={'gray'}
-                            
+
                         />
                         <FormValidationMessage></FormValidationMessage>
                     </View>
@@ -96,7 +96,7 @@ export default class AuthLogin extends React.Component {
                             fontWeight: '600'
                         }}>   PASSWORD
                         </Text>
-                        <FormInput  
+                        <FormInput
                             secureTextEntry={true}
                             style={{
                                 fontSize: 16,
@@ -106,12 +106,12 @@ export default class AuthLogin extends React.Component {
                             }}
                             placeholder={'Enter password'}
                             placeholderTextColor={'gray'}
-                            
+
                         />
                         <FormValidationMessage></FormValidationMessage>
                     </View>
-                    
-                    <TouchableOpacity 
+
+                    <TouchableOpacity
                         style={{
                             width: SCREEN_WIDTH - 90,
                             height: 45,
@@ -119,7 +119,7 @@ export default class AuthLogin extends React.Component {
                             justifyContent: 'center',
                             marginTop: 10,
                         }}
-                        
+
                     >
                         <Text style={{
                             color: 'rgb(255,255,255)',
@@ -135,7 +135,7 @@ export default class AuthLogin extends React.Component {
                         width: SCREEN_WIDTH - 80,
                         marginTop: 120,
                         marginBottom: 60
-                    }}> 
+                    }}>
                         <Text style = {{
                             color: 'rgb(195,195,195)',
                             fontSize: 12,
@@ -258,7 +258,3 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 });
-
-
-
-

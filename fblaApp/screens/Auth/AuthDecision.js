@@ -1,13 +1,13 @@
 import React from 'react'
 import { View, TouchableOpacity, Text, Dimensions, Image } from 'react-native'
-import logo from 'C:/Sahil/Mobile App Dev/FBLA-MobileAppDev2020/fblaApp/assets/images/fbla-logo.png'
+import logo from '../../assets/images/fbla-logo.png'
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 export default class AuthDecision extends React.Component {
 
   render() {
-    return (    
+    return (
     <View style = {{
       flex:1,
       width:SCREEN_WIDTH,
@@ -22,7 +22,7 @@ export default class AuthDecision extends React.Component {
                 marginBottom: 90,
                 resizeMode: 'contain'
             }} />
-            
+
             <TouchableOpacity onPress={() => this.props.navigation.navigate('MemberTabNavigator')}>
                 <View style = {{
                   width: SCREEN_WIDTH - 80,
@@ -70,7 +70,7 @@ export default class AuthDecision extends React.Component {
             justifyContent: 'center',
             width: SCREEN_WIDTH - 80,
             marginTop: 60
-          }}> 
+          }}>
             <Text style = {{
               color: 'rgb(195,195,195)',
               fontSize: 14,
@@ -81,8 +81,8 @@ export default class AuthDecision extends React.Component {
               <Text style={{fontWeight: "bold", color: 'rgb(100,100,100)'}}>Terms and Conditions</Text>
             </Text>
           </View>
-          
-        
+
+
     </View>
     )
   }
