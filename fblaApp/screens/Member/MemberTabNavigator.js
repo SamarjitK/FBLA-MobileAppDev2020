@@ -84,9 +84,34 @@ CalendarStack.navigationOptions = {
     ),
   };
 
+const AboutStack = createStackNavigator({
+    MemberAbout: { screen: MemberAbout },
+},
+{
+  headerMode: 'none',
+  lazy:false,
+  navigationOptions: {
+      headerVisible: false,
+  },
+  
+  initialRouteName: 'MemberAbout',
+});
+  
+AboutStack.navigationOptions = {
+    tabBarLabel: <Text style={{ fontSize: 12, fontWeight: "bold", color: 'rgb(0,82,155)' }}>About</Text>,
+    tabBarIcon: ({ focused }) => (
+      <TabBarIcon
+        focused={focused}
+        
+        name={Platform.OS === 'ios' ? 'ios-information-circle-outline' : 'md-information-circle-outline'}
+        style = 'light'
+      />
+    ),
+  };
+
 const SettingsStack = createStackNavigator({
   MemberSettings: { screen: MemberSettings },
-  MemberAbout: {screen: MemberAbout},
+  
 },
 {
   headerMode: 'none',
@@ -116,6 +141,7 @@ export default createMaterialBottomTabNavigator({
   HomeStack: { screen: HomeStack },
   EventsStack: { screen: EventsStack },
   CalendarStack: {screen: CalendarStack},
+  AboutStack: {screen: AboutStack},
   SettingsStack: { screen: SettingsStack },
   
 }, 
