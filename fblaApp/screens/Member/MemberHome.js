@@ -20,7 +20,7 @@ export default class MemberHome extends React.Component {
             backgroundColor='rgb(0,82,155)'
             innerContainerStyles = {{alignItems: 'center'}}
             leftComponent ={
-                <Button transparent style = {{ justifyContent: 'flex-start', alignItems: 'center', width:55, marginLeft: 10, marginTop: 40}} onPress={() => this.props.navigation.navigate('AuthDecision')}>
+                <Button transparent style = {{ justifyContent: 'flex-start', alignItems: 'center', width:55, marginLeft: 10, marginTop: 40}} onPress={() => this.props.navigation.navigate('MemberChangeProfile')}>
                     <Icon style = {{height:30, width:30}} name = 'ios-contact' type='ionicon' size = {30} color='white' />
                 </Button>
             } 

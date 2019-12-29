@@ -8,9 +8,11 @@ import MemberEvents from './MemberEvents.js';
 import MemberAbout from './MemberAbout.js';
 import MemberCalendar from './MemberCalendar.js';
 import MemberSettings from './MemberSettings.js';
+import MemberChangeProfile from './MemberChangeProfile.js';
 
 const HomeStack = createStackNavigator({
     MemberHome: { screen: MemberHome },
+    MemberChangeProfile: {screen: MemberChangeProfile}
   }, 
   {
     headerMode: 'none',

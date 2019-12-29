@@ -1,7 +1,7 @@
 import React from 'react'
-import { View, Dimensions, Text } from 'react-native'
-import { Header, Icon } from 'react-native-elements';
-import {Button} from 'native-base'
+import { View, Dimensions, Text, Switch, ScrollView, StyleSheet, TouchableOpacity } from 'react-native'
+import { Header, Icon} from 'react-native-elements';
+import {Button, Card, CardItem, Body, Right} from 'native-base'
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 export default class MemberSettings extends React.Component {
@@ -19,20 +19,79 @@ export default class MemberSettings extends React.Component {
             outerContainerStyles={{ zIndex: 1, height:90}}
             backgroundColor='rgb(0,82,155)'
             innerContainerStyles = {{alignItems: 'center'}}
-            leftComponent ={
-                <Button transparent style = {{ justifyContent: 'flex-start', alignItems: 'center', width:55, marginLeft: 10, marginTop: 40}} onPress={() => this.props.navigation.navigate('AuthDecision')}>
-                    <Icon style = {{height:30, width:30}} name = 'ios-contact' type='ionicon' size = {30} color='white' />
-                </Button>
-            } 
+            
         />
-        <View style = {{
-            justifyContent: 'center',
+        
+          <Card>
+          <CardItem bordered button onPress={() => this.props.navigation.navigate('PlayerOnboarding')} >
+              <Body style = {{ justifyContent: 'center'}}>
+                <Text style = {{fontSize: 15, fontWeight:'600', color: 'rgb(50,50,50)'}}>Q and A</Text>
+              </Body>
+              <Right>
+              <View style = {{ justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+                <Icon name = 'ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+              </View>
+              </Right>
+            </CardItem>           
+            <CardItem bordered button onPress={() => this.props.navigation.navigate('PlayerOnboarding')} >
+              <Body style = {{ justifyContent: 'center'}}>
+                <Text style = {{fontSize: 15, fontWeight:'600', color: 'rgb(50,50,50)'}}>Licensing</Text>
+              </Body>
+              <Right>
+              <View style = {{ justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+                <Icon name = 'ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+              </View>
+              </Right>
+            </CardItem>
+            <CardItem bordered button onPress={() => this.props.navigation.navigate('PlayerOnboarding')} >
+              <Body style = {{ justifyContent: 'center'}}>
+                <Text style = {{fontSize: 15, fontWeight:'600', color: 'rgb(50,50,50)'}}>Terms of Use</Text>
+              </Body>
+              <Right>
+              <View style = {{ justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+                <Icon name = 'ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+              </View>
+              </Right>
+            </CardItem>
+            <CardItem bordered button onPress={() => this.props.navigation.navigate('PlayerOnboarding')} >
+              <Body style = {{ justifyContent: 'center'}}>
+                <Text style = {{fontSize: 15, fontWeight:'600', color: 'rgb(50,50,50)'}}>Contact Us</Text>
+              </Body>
+              <Right>
+              <View style = {{ justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+                <Icon name = 'ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+              </View>
+              </Right>
+            </CardItem>
+
+          </Card>
+          <View style = {{
             alignItems: 'center',
-        }}>    
-            <Text> MEMBER SETTINGS</Text>
-            <Text onPress={() => this.props.navigation.navigate('AuthDecision')}>Click here to go to login</Text>
+            justifyContent: 'center', 
+            marginTop: 20,
+          }}>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('AuthLogin')}>
+                <View style = {{
+                  width: SCREEN_WIDTH - 120,
+                  height: 40,
+                  backgroundColor:'rgb(255,255,255)',
+                  borderColor: 'rgb(191,47,56)',
+                  borderRadius:10,
+                  borderWidth: 1,
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <Text style = {{
+                    color: 'rgb(191,47,56)',
+                    fontSize: 15,
+                    fontWeight: '600',
+                  }}>
+                    Log out
+                  </Text>
+                </View>
+            </TouchableOpacity>
         </View>
-    </View>
+        </View>
     )
   }
 }
