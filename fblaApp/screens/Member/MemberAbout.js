@@ -1,7 +1,8 @@
 import React from 'react'
-import { View, Dimensions, Text, ScrollView } from 'react-native'
+import { View, Dimensions, Text, ScrollView, Linking } from 'react-native'
 import { Header, Icon } from 'react-native-elements';
-import {Button, Card, CardItem} from 'native-base'
+import {Button, Card, CardItem} from 'native-base';
+import TabBarIcon from '../../components/TabBarIcon';
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 export default class MemberAbout extends React.Component {
@@ -61,6 +62,25 @@ export default class MemberAbout extends React.Component {
                           {"\n\n"}
                           FBLA’s National Awards Program, also called competitive events, give students the opportunity to compete against the best-of-the-best in over 60 academic events that cover technology, public speaking, business, finance, management, and more. The top winners take home trophies and cash from sponsored events.
                         </Text>
+                    </CardItem>
+                    <CardItem style={{alignItems: 'center'}}>
+                      <Button light style={{padding: 10}} onPress={ ()=> Linking.openURL('https://www.fbla-pbl.org/')}>
+                        <TabBarIcon
+                          name={Platform.OS === 'ios' ? 'ios-globe' : 'md-globe'}
+                        />
+                      </Button>
+                      <Text>  </Text>
+                      <Button light style={{padding: 10}} onPress={ ()=> Linking.openURL('http://www.facebook.com/FutureBusinessLeaders')}>
+                        <TabBarIcon
+                          name={Platform.OS === 'ios' ? 'logo-facebook' : 'md-logo-facebook'}
+                        />
+                      </Button>
+                      <Text>  </Text>
+                      <Button light style={{padding: 10}} onPress={ ()=> Linking.openURL('https://instagram.com/fbla_pbl/')}>
+                        <TabBarIcon
+                          name={Platform.OS === 'ios' ? 'logo-instagram' : 'md-logo-instagram'}
+                        />
+                      </Button>
                     </CardItem>
                 </Card>
                 <Card style={{ width: SCREEN_WIDTH - 20, alignItems: 'flex-start'}}>
