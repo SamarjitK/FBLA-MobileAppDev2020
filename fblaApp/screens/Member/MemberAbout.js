@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Dimensions, Text, ScrollView, Linking } from 'react-native'
 import { Header, Icon } from 'react-native-elements';
-import {Button, Card, CardItem} from 'native-base';
+import {Button, Card, CardItem, Body, Right} from 'native-base';
 import TabBarIcon from '../../components/TabBarIcon';
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
@@ -81,6 +81,16 @@ export default class MemberAbout extends React.Component {
                           name={Platform.OS === 'ios' ? 'logo-instagram' : 'md-logo-instagram'}
                         />
                       </Button>
+                    </CardItem>
+                    <CardItem footer bordered button>
+                      <Body style={{ justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 18, fontWeight: '600', color: 'rgb(50,50,50)' }}>Learn more</Text>
+                      </Body>
+                      <Right>
+                        <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }}>
+                          <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                        </View>
+                      </Right>
                     </CardItem>
                 </Card>
                 <Card style={{ width: SCREEN_WIDTH - 20, alignItems: 'flex-start'}}>

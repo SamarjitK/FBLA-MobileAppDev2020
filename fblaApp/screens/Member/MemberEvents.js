@@ -21,13 +21,14 @@ export default class MemberEvents extends React.Component {
             innerContainerStyles = {{alignItems: 'center'}}
             
         />
+        <ScrollView
+                showsVerticalScrollIndicator={false}
+            >
         <View style = {{
             justifyContent: 'center',
             alignItems: 'center',
         }}>    
-            <ScrollView
-                showsVerticalScrollIndicator={false}
-            >
+            
                 <Card style={{ width: SCREEN_WIDTH - 20, alignItems: 'flex-start'}}>
                     <CardItem header bordered>
                         <Text style={{
@@ -55,8 +56,9 @@ export default class MemberEvents extends React.Component {
                     </CardItem>
                 </Card>
 
-            </ScrollView>
+            
         </View>
+        </ScrollView>
     </View>
     )
   }
