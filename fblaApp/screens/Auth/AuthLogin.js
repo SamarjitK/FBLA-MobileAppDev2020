@@ -21,7 +21,7 @@ export default class AuthLogin extends React.Component {
         return (
           <View>
             <Header
-              outerContainerStyles={{ zIndex: 1, height:95, borderBottomColor:'white'}}
+              outerContainerStyles={{ zIndex: 1, height:90}}
               backgroundColor='rgb(255,255,255)'
               innerContainerStyles = {{alignItems: 'center'}}
               leftComponent ={
@@ -42,7 +42,7 @@ export default class AuthLogin extends React.Component {
               scrollEnabled = {false}
               extraHeight = {175}
             >
-              <View style = {{alignItems: 'center', justifyContent: 'center', marginTop: 11, marginBottom: 60}}>
+              <View style = {{alignItems: 'center', justifyContent: 'center', marginTop: 16, marginBottom: 60}}>
                   {this.image}
               </View>
 

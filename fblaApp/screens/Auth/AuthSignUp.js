@@ -27,13 +27,11 @@ export default class AuthSignUp extends React.Component {
         const { selectedIndex } = this.state
       
         return (
-            <KeyboardAwareScrollView
-                showsVerticalScrollIndicator={false}
-            >
+            
 
             <View>
                 <Header
-                    outerContainerStyles={{ zIndex: 1, height:90, borderBottomColor:'white'}}
+                    outerContainerStyles={{ zIndex: 1, height:90}}
                     backgroundColor='rgb(255,255,255)'
                   innerContainerStyles = {{alignItems: 'center'}}
                   leftComponent ={
@@ -63,7 +61,10 @@ export default class AuthSignUp extends React.Component {
                     justifyContent: 'space-around',
                   }}
                 />
-                
+            <KeyboardAwareScrollView
+                showsVerticalScrollIndicator={false}
+                style = {{marginBottom: 60}}
+            >
                 <View style={{
                     alignItems: 'center', marginTop: 10, flexDirection: 'row',
                 }}>
@@ -349,8 +350,8 @@ export default class AuthSignUp extends React.Component {
                         title='I have read over and agree to the Terms and Conditions'
                         checked={this.state.checked}
                     />
-                    </View>
                 </View>
+                
                 <View style = {{alignItems: 'center', justifyContent: 'center'}}>
                 <TouchableOpacity
                     style={{
@@ -387,7 +388,8 @@ export default class AuthSignUp extends React.Component {
                             <Text style={{fontWeight: "bold", color: 'rgb(100,100,100)', marginTop: 5, textAlign: 'center', fontSize: 14}} >CREATE YOUR ACCOUNT</Text>
                         </TouchableOpacity>
                 </View>
-        </KeyboardAwareScrollView>
+                </KeyboardAwareScrollView>
+                </View>
         )
       }
 }

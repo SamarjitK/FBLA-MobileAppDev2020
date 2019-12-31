@@ -27,13 +27,11 @@ export default class AuthSignUpAdmin extends React.Component {
         const { selectedIndex } = this.state
       
         return (
-            <KeyboardAwareScrollView
-                showsVerticalScrollIndicator={false}
-            >
+            
 
             <View>
                 <Header
-                    outerContainerStyles={{ zIndex: 1, height:90, borderBottomColor:'white'}}
+                    outerContainerStyles={{ zIndex: 1, height:90}}
                     backgroundColor='rgb(255,255,255)'
                   innerContainerStyles = {{alignItems: 'center'}}
                   leftComponent ={
@@ -52,7 +50,10 @@ export default class AuthSignUpAdmin extends React.Component {
                     justifyContent: 'space-around',
                   }}
                 />
-                
+                <KeyboardAwareScrollView
+                    showsVerticalScrollIndicator={false}
+                    style = {{marginBottom: 90}}
+                >
                 
 
                 
@@ -378,7 +379,7 @@ export default class AuthSignUpAdmin extends React.Component {
                         checked={this.state.checked}
                     />
                     </View>
-                </View>
+                
                 <View style = {{alignItems: 'center', justifyContent: 'center'}}>
                 <TouchableOpacity
                     style={{
@@ -402,6 +403,7 @@ export default class AuthSignUpAdmin extends React.Component {
                 </View>
                 
         </KeyboardAwareScrollView>
+        </View>
         )
       }
 }
