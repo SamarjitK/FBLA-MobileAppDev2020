@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image, Dimen
 import logo from '../../assets/images/fbla-logo.png';
 import { FormInput, FormValidationMessage, SocialIcon, Row, Header, Icon } from 'react-native-elements';
 import { Form, Item, Input, Label, Button } from 'native-base';
-
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -13,14 +13,7 @@ export default class AuthLogin extends React.Component {
     render() {
         return (
 
-        <KeyboardAvoidingView style = {{
-          flex:1,
-          width:SCREEN_WIDTH,
-          height:SCREEN_HEIGHT,
-          justifyContent: 'center',
-          alignItems: 'stretch',
-          backgroundColor: 'rgb(255,255,255)'
-        }}>
+        <View>
             <Header
 
             outerContainerStyles={{ zIndex: 1, height:90, borderBottomColor:'white'}}
@@ -35,6 +28,11 @@ export default class AuthLogin extends React.Component {
               justifyContent: 'space-around',
             }}
             />
+            <KeyboardAwareScrollView
+        //keyboardVerticalOffset = {Header.HEIGHT+20}
+        //behavior = "padding"
+        extraHeight = {175}
+        >
             <View style = {{alignItems: 'center', justifyContent: 'center', marginTop: 16, marginBottom: 60}}>
                 <Image source={logo} style={{
                     width: 230,
@@ -62,7 +60,7 @@ export default class AuthLogin extends React.Component {
                         <Text style={{
                             fontSize: 15,
                             marginHorizontal: 9,
-                            color: 'rgb(150,150,150)',
+                            color: 'rgb(60,60,60)',
                             fontWeight: '600'
                         }}>   EMAIL
                         </Text>
@@ -92,7 +90,7 @@ export default class AuthLogin extends React.Component {
                         <Text style={{
                             fontSize: 15,
                             marginHorizontal: 9,
-                            color: 'rgb(150,150,150)',
+                            color: 'rgb(60,60,60)',
                             fontWeight: '600'
                         }}>   PASSWORD
                         </Text>
@@ -115,15 +113,15 @@ export default class AuthLogin extends React.Component {
                         style={{
                             width: SCREEN_WIDTH - 90,
                             height: 45,
-                            backgroundColor: 'rgba(100,100,100,0.4)',
+                            backgroundColor: 'rgba(0,82,155,0.9999)',
                             justifyContent: 'center',
                             marginTop: 10,
                         }}
-
+                        onPress={() => this.props.navigation.navigate('MemberTabNavigator')}
                     >
                         <Text style={{
                             color: 'rgb(255,255,255)',
-                            fontSize: 19,
+                            fontSize: 14,
                             fontWeight: '700',
                             textAlign: 'center'
                         }}>
@@ -145,9 +143,12 @@ export default class AuthLogin extends React.Component {
                             <Text style={{fontWeight: "bold", color: 'rgb(100,100,100)'}} >CREATE ONE</Text>
                         </Text>
                     </View>
+                    
                 </View>
+                
             </View>
-        </KeyboardAvoidingView>
+            </KeyboardAwareScrollView>
+            </View>
         )
       }
 }

@@ -23,7 +23,7 @@ export default class AuthDecision extends React.Component {
                 resizeMode: 'contain'
             }} />
 
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('MemberTabNavigator')}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('AuthTabNavigator')}>
                 <View style = {{
                   width: SCREEN_WIDTH - 80,
                   height: 60,
@@ -44,7 +44,7 @@ export default class AuthDecision extends React.Component {
                 </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('AuthLogin')}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('AuthTabNavigator')}>
                 <View style = {{
                   width: SCREEN_WIDTH - 80,
                   height: 60,
