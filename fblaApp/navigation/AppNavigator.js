@@ -1,15 +1,17 @@
 import React from 'react';
-import { createSwitchNavigator, createStackNavigator, createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { createDrawerNavigator } from 'react-navigation-drawer'; 
+import { createStackNavigator } from 'react-navigation-stack'
 import AuthLoading from '../screens/Auth/AuthLoading';
 import AuthDecision from '../screens/Auth/AuthDecision';
 import AuthLogin from '../screens/Auth/AuthLogin';
 import AuthSignUp from '../screens/Auth/AuthSignUp';
+import AuthSignUpAdmin from '../screens/Auth/AuthSignUpAdmin';
 //import AuthTabNavigator from '../screens/Auth/AuthTabNavigator';
 import MemberTabNavigator from '../screens/Member/MemberTabNavigator.js';
 
 
-const MemberAuthStack = createSwitchNavigator({
+const MemberAuthStack = createStackNavigator({
     PlayerAuthLoading: {screen: AuthLoading}
 });
 const AuthStack = createSwitchNavigator({
@@ -17,8 +19,10 @@ const AuthStack = createSwitchNavigator({
     AuthDecision: {screen: AuthDecision},
     AuthLogin: {screen: AuthLogin},
     AuthSignUp: {screen: AuthSignUp},
+    AuthSignUpAdmin: {screen: AuthSignUpAdmin},
     //AuthTabNavigator: {screen: AuthTabNavigator},
-    MemberTabNavigator: {screen: MemberTabNavigator}
+    MemberTabNavigator: {screen: MemberTabNavigator},
+    
 });
 export default createAppContainer(createDrawerNavigator(
     {

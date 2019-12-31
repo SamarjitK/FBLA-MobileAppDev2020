@@ -143,7 +143,7 @@ export default class AuthLogin extends React.Component {
                               fontSize: 12,
                               textAlign: 'center'
                           }}>
-                              <Text>DON'T HAVE AN ACCOUNT? </Text>
+                              <Text>DON'T HAVE AN ACCOUNT? </Text>                               
                               <Text style={{fontWeight: "bold", color: 'rgb(100,100,100)'}} onPress={() => this.props.navigation.navigate('AuthSignUp')}> CREATE ONE</Text>
                           </Text>
                       </View>
