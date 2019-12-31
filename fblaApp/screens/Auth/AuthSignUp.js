@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image, Dimensions, TextInput, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image, Dimensions, TextInput, Picker, KeyboardAvoidingView } from 'react-native';
 import logo from '../../assets/images/fbla-logo.png';
 import { FormInput, FormValidationMessage, SocialIcon, Row, Header, Icon, ButtonGroup, CheckBox } from 'react-native-elements';
 import { Form, Item, Input, Label, Button } from 'native-base';
@@ -27,7 +27,10 @@ export default class AuthSignUp extends React.Component {
         const { selectedIndex } = this.state
       
         return (
-            <KeyboardAwareScrollView>
+            <KeyboardAwareScrollView
+                showsVerticalScrollIndicator={false}
+            >
+
             <View>
                 <Header
                     outerContainerStyles={{ zIndex: 1, height:90, borderBottomColor:'white'}}
@@ -39,6 +42,13 @@ export default class AuthSignUp extends React.Component {
                   </Button>
                   }
                   centerComponent = {
+                    <View style = {{alignItems: 'center', justifyContent: 'center', marginTop: 33, marginLeft: -40}}>
+                        <Text style = {{fontSize: 25, fontWeight: '700', color: 'rgb(80,80,80)'}}>Join FBLA</Text>
+                    </View>
+                    
+                  }
+                  /*
+                  centerComponent = {
                     <ButtonGroup
                         onPress={this.updateIndex}
                         selectedIndex={selectedIndex}
@@ -46,14 +56,16 @@ export default class AuthSignUp extends React.Component {
                         innerContainerStyles = {{padding: 10}}
                         containerStyle={{height: 40, width: 140, marginTop: 40, marginLeft: -35}}
                     />
+                    
                   }
+                  */
                   containerStyle={{
                     justifyContent: 'space-around',
                   }}
                 />
                 
                 <View style={{
-                    alignItems: 'center', marginTop: 30, flexDirection: 'row',
+                    alignItems: 'center', marginTop: 10, flexDirection: 'row',
                 }}>
                     <View style = {{flex: 1, marginLeft: 20}}>
                         <TouchableOpacity>
@@ -98,7 +110,7 @@ export default class AuthSignUp extends React.Component {
                     alignItems: 'flex-start',
                     justifyContent: 'flex-start',
                     marginLeft: 20,
-                    marginTop: 40,
+                    marginTop: 20,
                 }}>
                     <View style={{
                         marginBottom: 30,
@@ -122,7 +134,7 @@ export default class AuthSignUp extends React.Component {
                                 marginTop: 5,
                                 color: 'gray'
                             }}
-                            placeholder={'Enter first name'}
+                            placeholder={''}
                             placeholderTextColor={'gray'}
 
                         />
@@ -151,7 +163,7 @@ export default class AuthSignUp extends React.Component {
                                 marginTop: 5,
                                 color: 'gray'
                             }}
-                            placeholder={'Enter last name'}
+                            placeholder={''}
                             placeholderTextColor={'gray'}
 
                         />
@@ -172,7 +184,7 @@ export default class AuthSignUp extends React.Component {
                         }}>   EMAIL
                         </Text>
 
-
+                        
                         <FormInput
                             style={{
                                 fontSize: 16,
@@ -180,7 +192,7 @@ export default class AuthSignUp extends React.Component {
                                 marginTop: 5,
                                 color: 'gray'
                             }}
-                            placeholder={'Enter email'}
+                            placeholder={''}
                             placeholderTextColor={'gray'}
 
                         />
@@ -200,8 +212,6 @@ export default class AuthSignUp extends React.Component {
                             fontWeight: '600'
                         }}>   GRADE
                         </Text>
-
-
                         <FormInput
                             style={{
                                 fontSize: 16,
@@ -209,12 +219,12 @@ export default class AuthSignUp extends React.Component {
                                 marginTop: 5,
                                 color: 'gray'
                             }}
-                            placeholder={'Enter grade'}
+                            placeholder={''}
                             placeholderTextColor={'gray'}
 
                         />
                         <FormValidationMessage></FormValidationMessage>
-                    </View>
+                    </View> 
 
                     <View style={{
                         marginBottom: 30,
@@ -238,7 +248,7 @@ export default class AuthSignUp extends React.Component {
                                 marginTop: 5,
                                 color: 'gray'
                             }}
-                            placeholder={'Enter T-shirt size'}
+                            placeholder={''}
                             placeholderTextColor={'gray'}
 
                         />
@@ -279,7 +289,7 @@ export default class AuthSignUp extends React.Component {
                                 marginTop: 5,
                                 color: 'gray'
                             }}
-                            placeholder={'Enter password'}
+                            placeholder={''}
                             placeholderTextColor={'gray'}
                             secureTextEntry={true}
                         />
@@ -308,7 +318,7 @@ export default class AuthSignUp extends React.Component {
                                 marginTop: 5,
                                 color: 'gray'
                             }}
-                            placeholder={'Enter password'}
+                            placeholder={''}
                             placeholderTextColor={'gray'}
                             secureTextEntry={true}
                         />
@@ -322,7 +332,7 @@ export default class AuthSignUp extends React.Component {
                     />
                     </View>
                 </View>
-                <View style = {{alignItems: 'center', justifyContent: 'center', marginBottom: 50}}>
+                <View style = {{alignItems: 'center', justifyContent: 'center'}}>
                 <TouchableOpacity
                     style={{
                         width: SCREEN_WIDTH - 90,
@@ -341,6 +351,21 @@ export default class AuthSignUp extends React.Component {
                     }}>
                     Sign up </Text>
                 </TouchableOpacity>
+                </View>
+                <View style = {{
+                    alignSelf: 'center',
+                    justifyContent: 'center',
+                    width: SCREEN_WIDTH - 80,
+                    marginTop: 40,
+                    marginBottom: 60
+                }}>
+                        <Text style = {{
+                            color: 'rgb(195,195,195)',
+                            fontSize: 12,
+                            textAlign: 'center'
+                        }}>ARE YOU LOOKING TO MANAGE A CHAPTER? </Text>
+                        <Text style={{fontWeight: "bold", color: 'rgb(100,100,100)', marginTop: 5, textAlign: 'center', fontSize: 14}} >CREATE YOUR ACCOUNT</Text>
+                    
                 </View>
         </KeyboardAwareScrollView>
         )

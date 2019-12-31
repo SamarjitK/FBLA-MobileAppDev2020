@@ -5,7 +5,7 @@ import AuthLoading from '../screens/Auth/AuthLoading';
 import AuthDecision from '../screens/Auth/AuthDecision';
 import AuthLogin from '../screens/Auth/AuthLogin';
 import AuthSignUp from '../screens/Auth/AuthSignUp';
-import AuthTabNavigator from '../screens/Auth/AuthTabNavigator';
+//import AuthTabNavigator from '../screens/Auth/AuthTabNavigator';
 import MemberTabNavigator from '../screens/Member/MemberTabNavigator.js';
 
 
@@ -17,7 +17,7 @@ const AuthStack = createSwitchNavigator({
     AuthDecision: {screen: AuthDecision},
     AuthLogin: {screen: AuthLogin},
     AuthSignUp: {screen: AuthSignUp},
-    AuthTabNavigator: {screen: AuthTabNavigator},
+    //AuthTabNavigator: {screen: AuthTabNavigator},
     MemberTabNavigator: {screen: MemberTabNavigator}
 });
 export default createAppContainer(createDrawerNavigator(

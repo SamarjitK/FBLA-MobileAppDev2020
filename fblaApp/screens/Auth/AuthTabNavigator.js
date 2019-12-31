@@ -2,8 +2,8 @@ import React from 'react';
 import { Platform, Text } from 'react-native';
 import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
 import { createStackNavigator } from 'react-navigation-stack'
-import AuthLogin from 'C:\Sahil\Mobile App Dev\FBLA-MobileAppDev2020\fblaApp\screens\Auth\AuthLogin.js';
-import AuthSignUp from 'C:\Sahil\Mobile App Dev\FBLA-MobileAppDev2020\fblaApp\screens\Auth\AuthSignUp.js';
+import AuthLogin from '../screens/Auth/AuthLogin';
+import AuthSignUp from '../screens/Auth/AuthSignUp'; 
 
 const LoginStack = createStackNavigator({
     AuthLogin: { screen: AuthLogin },

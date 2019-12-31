@@ -5,7 +5,14 @@ import logo from '../../assets/images/fbla-logo.png'
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 export default class AuthDecision extends React.Component {
-
+  componentWillMount() {
+    this.image = (<Image source={logo} style={{
+      width: 230,
+      height: 230,
+      marginBottom: 90,
+      resizeMode: 'contain'
+    }} />);
+  }
   render() {
     return (
     <View style = {{
@@ -16,14 +23,9 @@ export default class AuthDecision extends React.Component {
       backgroundColor: 'rgb(255,255,255)'
     }}>
         <View style = {{alignItems: 'center', justifyContent: 'center', marginTop: 50, marginBottom: 100}}>
-            <Image source={logo} style={{
-                width: 230,
-                height: 230,
-                marginBottom: 90,
-                resizeMode: 'contain'
-            }} />
+            {this.image}
 
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('AuthTabNavigator')}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('AuthSignUp')}>
                 <View style = {{
                   width: SCREEN_WIDTH - 80,
                   height: 60,
@@ -44,7 +46,7 @@ export default class AuthDecision extends React.Component {
                 </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('AuthTabNavigator')}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('AuthLogin')}>
                 <View style = {{
                   width: SCREEN_WIDTH - 80,
                   height: 60,
