@@ -24,6 +24,19 @@ export default class MemberHome extends React.Component {
                     <Icon style = {{height:30, width:30}} name = 'ios-contact' type='ionicon' size = {30} color='white' />
                 </Button>
             } 
+            centerComponent = {
+                <Text style={{
+                    color: 'white',
+                    fontSize: 13,
+                    fontWeight: '400',
+                    textAlign: 'center',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: 20,
+                    fontWeight: '600',
+                    marginTop: 35
+                }}>HOME</Text>
+              }
         />
         <View style = {{
             justifyContent: 'center',

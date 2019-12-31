@@ -19,7 +19,19 @@ export default class MemberEvents extends React.Component {
             outerContainerStyles={{ zIndex: 1, height:90}}
             backgroundColor='rgb(0,82,155)'
             innerContainerStyles = {{alignItems: 'center'}}
-            
+            centerComponent = {
+                <Text style={{
+                    color: 'white',
+                    fontSize: 13,
+                    fontWeight: '400',
+                    textAlign: 'center',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: 20,
+                    fontWeight: '600',
+                    marginTop: 35
+                }}>EVENTS</Text>
+              }
         />
         <ScrollView
                 showsVerticalScrollIndicator={false}

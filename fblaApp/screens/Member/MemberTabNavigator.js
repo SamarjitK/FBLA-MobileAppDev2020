@@ -9,6 +9,7 @@ import MemberAbout from './MemberAbout.js';
 import MemberCalendar from './MemberCalendar.js';
 import MemberSettings from './MemberSettings.js';
 import MemberChangeProfile from './MemberChangeProfile.js';
+import MemberAboutFBLA from './MemberAboutFBLA.js'
 
 const HomeStack = createStackNavigator({
     MemberHome: { screen: MemberHome },
@@ -88,6 +89,7 @@ CalendarStack.navigationOptions = {
 
 const AboutStack = createStackNavigator({
     MemberAbout: { screen: MemberAbout },
+    MemberAboutFBLA: {screen: MemberAboutFBLA},
 },
 {
   headerMode: 'none',

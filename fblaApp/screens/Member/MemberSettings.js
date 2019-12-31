@@ -19,7 +19,19 @@ export default class MemberSettings extends React.Component {
             outerContainerStyles={{ zIndex: 1, height:90}}
             backgroundColor='rgb(0,82,155)'
             innerContainerStyles = {{alignItems: 'center'}}
-            
+            centerComponent = {
+              <Text style={{
+                  color: 'white',
+                  fontSize: 13,
+                  fontWeight: '400',
+                  textAlign: 'center',
+                  justifyContent: 'center',
+                  width: '100%',
+                  fontSize: 20,
+                  fontWeight: '600',
+                  marginTop: 35
+              }}>SETTINGS</Text>
+            }
         />
         
           <Card>
