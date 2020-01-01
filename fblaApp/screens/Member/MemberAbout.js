@@ -3,8 +3,12 @@ import { View, Dimensions, Text, ScrollView, Linking } from 'react-native'
 import { Header, Icon } from 'react-native-elements';
 import {Button, Card, CardItem, Body, Right} from 'native-base';
 import TabBarIcon from '../../components/TabBarIcon';
+import styles from '../../constants/Styles';
+
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
+
+
 export default class MemberAbout extends React.Component {
 
 

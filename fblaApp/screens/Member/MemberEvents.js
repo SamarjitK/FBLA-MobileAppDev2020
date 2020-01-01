@@ -2,8 +2,11 @@ import React from 'react'
 import { View, Dimensions, Text, ScrollView } from 'react-native'
 import { Header, Icon } from 'react-native-elements';
 import {Button, Card, CardItem} from 'native-base'
+import styles from '../../constants/Styles';
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
+
+
 export default class MemberEvents extends React.Component {
 
  

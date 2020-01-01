@@ -2,8 +2,12 @@ import React from 'react'
 import { View, Dimensions, Text } from 'react-native'
 import { Header, Icon } from 'react-native-elements';
 import {Button} from 'native-base'
+import styles from '../../constants/Styles';
+
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
+
+
 export default class MemberHome extends React.Component {
 
  

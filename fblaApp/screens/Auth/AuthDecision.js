@@ -4,6 +4,9 @@ import logo from '../../assets/images/fbla-logo.png'
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
+
+import styles from '../../constants/Styles';
+
 export default class AuthDecision extends React.Component {
   componentWillMount() {
     this.image = (<Image source={logo} style={{
@@ -62,7 +65,7 @@ export default class AuthDecision extends React.Component {
                     fontSize: 20,
 
                   }}>
-                    Login
+                    Sign In
                   </Text>
                 </View>
             </TouchableOpacity>
@@ -80,7 +83,7 @@ export default class AuthDecision extends React.Component {
              }}>
 
               <Text>By tapping on any of the above fields you are accepting our </Text>
-              <Text style={{fontWeight: "bold", color: 'rgb(100,100,100)'}}>Terms and Conditions</Text>
+              <Text style={{fontWeight: "bold", color: 'rgb(100,100,100)'}} onPress={() => this.props.navigation.navigate('Terms')}>Terms and Conditions</Text>
             </Text>
           </View>
 

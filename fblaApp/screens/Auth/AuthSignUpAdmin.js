@@ -4,7 +4,7 @@ import logo from '../../assets/images/fbla-logo.png';
 import { FormInput, FormValidationMessage, SocialIcon, Row, Header, Icon, ButtonGroup, CheckBox } from 'react-native-elements';
 import { Form, Item, Input, Label, Button } from 'native-base';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-
+import styles from '../../constants/Styles';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
@@ -35,7 +35,7 @@ export default class AuthSignUpAdmin extends React.Component {
                     backgroundColor='rgb(255,255,255)'
                   innerContainerStyles = {{alignItems: 'center'}}
                   leftComponent ={
-                  <Button transparent style = {{ justifyContent: 'flex-start', alignItems: 'center', width:55, marginLeft: 10, marginTop: 40}} onPress={() => this.props.navigation.navigate('AuthSignUp')}>
+                  <Button transparent style = {styles.authBackButton} onPress={() => this.props.navigation.navigate('AuthSignUp')}>
                     <Icon style = {{height:25, width:25}} name = 'ios-arrow-back' type='ionicon' color='black' />
                   </Button>
                   }

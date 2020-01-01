@@ -4,6 +4,7 @@ import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
 import { createStackNavigator } from 'react-navigation-stack'
 import AuthLogin from '../screens/Auth/AuthLogin';
 import AuthSignUp from '../screens/Auth/AuthSignUp'; 
+import Terms from '../screens/Auth/Terms';
 
 const LoginStack = createStackNavigator({
     AuthLogin: { screen: AuthLogin },
