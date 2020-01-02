@@ -20,8 +20,7 @@ export default class MemberHome extends React.Component {
         backgroundColor: 'rgb(255,255,255)',
     }}>
         <Header
-            outerContainerStyles={{ zIndex: 1, height:90}}
-            backgroundColor='rgb(0,82,155)'
+            outerContainerStyles={styles.memberHeader}
             innerContainerStyles = {{alignItems: 'center'}}
             leftComponent ={
                 <Button transparent style = {{ justifyContent: 'flex-start', alignItems: 'center', width:55, marginLeft: 10, marginTop: 40}} onPress={() => this.props.navigation.navigate('MemberChangeProfile')}>

@@ -52,6 +52,7 @@ export default class AuthSignUpAdmin extends React.Component {
                 />
                 <KeyboardAwareScrollView
                     showsVerticalScrollIndicator={false}
+                    extraHeight = {115}
                     style = {{marginBottom: 90}}
                 >
                 

@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image, Dimensions, TextInput, Picker, KeyboardAvoidingView } from 'react-native';
 import logo from '../../assets/images/fbla-logo.png';
 import { FormInput, FormValidationMessage, SocialIcon, Row, Header, Icon, ButtonGroup, CheckBox } from 'react-native-elements';
-import { Form, Item, Input, Label, Button } from 'native-base';
+import { Button } from 'native-base';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import styles from '../../constants/Styles';
 
@@ -45,24 +45,13 @@ export default class AuthSignUp extends React.Component {
                     </View>
                     
                   }
-                  /*
-                  centerComponent = {
-                    <ButtonGroup
-                        onPress={this.updateIndex}
-                        selectedIndex={selectedIndex}
-                        buttons={buttons}
-                        innerContainerStyles = {{padding: 10}}
-                        containerStyle={{height: 40, width: 140, marginTop: 40, marginLeft: -35}}
-                    />
-                    
-                  }
-                  */
                   containerStyle={{
                     justifyContent: 'space-around',
                   }}
                 />
             <KeyboardAwareScrollView
                 showsVerticalScrollIndicator={false}
+                extraHeight = {100}
                 style = {{marginBottom: 60}}
             >
                 <View style={{
@@ -236,6 +225,35 @@ export default class AuthSignUp extends React.Component {
                         />
                         <FormValidationMessage></FormValidationMessage>
                     </View> 
+
+                    <View style={{
+                        marginBottom: 30,
+                        width: SCREEN_WIDTH - 55,
+                        height: 55,
+                        borderRadius: 5,
+                    }}>
+                        <Text style={{
+                            fontSize: 15,
+                            marginHorizontal: 9,
+                            color: 'rgb(60,60,60)',
+                            fontWeight: '600'
+                        }}>   CHAPTER NAME
+                        </Text>
+
+
+                        <FormInput
+                            style={{
+                                fontSize: 16,
+                                marginHorizontal: 10,
+                                marginTop: 5,
+                                color: 'gray'
+                            }}
+                            placeholder={''}
+                            placeholderTextColor={'gray'}
+
+                        />
+                        <FormValidationMessage></FormValidationMessage>
+                    </View>
 
                     <View style={{
                         marginBottom: 30,

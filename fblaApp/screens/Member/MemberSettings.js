@@ -18,8 +18,7 @@ export default class MemberSettings extends React.Component {
         backgroundColor: 'rgb(255,255,255)',
     }}>
         <Header
-            outerContainerStyles={{ zIndex: 1, height:90}}
-            backgroundColor='rgb(0,82,155)'
+            outerContainerStyles={styles.memberHeader}
             innerContainerStyles = {{alignItems: 'center'}}
             centerComponent = {
               <Text style={{

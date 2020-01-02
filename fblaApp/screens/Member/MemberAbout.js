@@ -21,8 +21,7 @@ export default class MemberAbout extends React.Component {
         backgroundColor: 'rgb(255,255,255)',
     }}>
         <Header
-            outerContainerStyles={{ zIndex: 1, height: 90}}
-            backgroundColor='rgb(0,82,155)'
+            outerContainerStyles={styles.memberHeader}
             innerContainerStyles = {{alignItems: 'center'}}
             centerComponent = {
               <Text style={{
@@ -90,7 +89,17 @@ export default class MemberAbout extends React.Component {
                     </CardItem>
                     <CardItem footer bordered button onPress={() => this.props.navigation.navigate('MemberAboutFBLA')}>
                       <Body style={{ justifyContent: 'center' }}>
-                        <Text style={{ fontSize: 18, fontWeight: '600', color: 'rgb(50,50,50)' }}>Learn more</Text>
+                        <Text style={{ fontSize: 18, fontWeight: '600', color: 'rgb(50,50,50)' }}>Learn More</Text>
+                      </Body>
+                      <Right>
+                        <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                          <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                        </View>
+                      </Right>
+                    </CardItem>
+                    <CardItem footer bordered button onPress={() => this.props.navigation.navigate('MemberOfficers')}>
+                      <Body style={{ justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 18, fontWeight: '600', color: 'rgb(50,50,50)' }}>National Officers</Text>
                       </Body>
                       <Right>
                         <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >

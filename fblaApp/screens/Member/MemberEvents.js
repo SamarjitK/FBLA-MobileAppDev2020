@@ -19,8 +19,7 @@ export default class MemberEvents extends React.Component {
         backgroundColor: 'rgb(245,245,245)',
     }}>
         <Header
-            outerContainerStyles={{ zIndex: 1, height:90}}
-            backgroundColor='rgb(0,82,155)'
+            outerContainerStyles={styles.memberHeader}
             innerContainerStyles = {{alignItems: 'center'}}
             centerComponent = {
                 <Text style={{

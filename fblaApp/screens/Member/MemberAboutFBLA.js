@@ -1,8 +1,9 @@
 import React from 'react'
-import { View, Dimensions, Text, ScrollView, Linking } from 'react-native'
+import { View, Dimensions, Text, ScrollView } from 'react-native'
 import { Header, Icon } from 'react-native-elements';
-import {Button, Card, CardItem, Body, Right} from 'native-base';
-import TabBarIcon from '../../components/TabBarIcon';
+import {Button, Card, CardItem} from 'native-base';
+import styles from '../../constants/Styles';
+
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 export default class MemberAboutFBLA extends React.Component {
@@ -17,8 +18,7 @@ export default class MemberAboutFBLA extends React.Component {
         backgroundColor: 'rgb(255,255,255)',
     }}>
         <Header
-            outerContainerStyles={{ zIndex: 1, height: 90}}
-            backgroundColor='rgb(0,82,155)'
+            outerContainerStyles={styles.memberHeader}
             innerContainerStyles = {{alignItems: 'center'}}
             leftComponent ={
                 <Button transparent style = {{ justifyContent: 'flex-start', alignItems: 'center', width:55, marginLeft: 10, marginTop: 40}} onPress={() => this.props.navigation.navigate('MemberAbout')}>
