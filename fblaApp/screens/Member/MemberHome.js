@@ -37,6 +37,7 @@ export default class MemberHome extends React.Component {
                     justifyContent: 'center',
                     fontSize: 20,
                     fontWeight: '600',
+                    marginLeft: -40,
                     marginTop: 35
                 }}>HOME</Text>
               }

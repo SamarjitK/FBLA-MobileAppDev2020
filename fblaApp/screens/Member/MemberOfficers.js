@@ -42,10 +42,9 @@ export default class MemberOfficers extends React.Component {
                   fontWeight: '400',
                   textAlign: 'center',
                   justifyContent: 'center',
-                  
                   fontSize: 20,
                   fontWeight: '600',
-                  marginLeft: -38,
+                  marginLeft: -40,
                   marginTop: 35
               }}>NATIONAL OFFICERS</Text>
             }

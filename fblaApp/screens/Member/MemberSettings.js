@@ -4,11 +4,21 @@ import { Header, Icon} from 'react-native-elements';
 import {Button, Card, CardItem, Body, Right} from 'native-base'
 import styles from '../../constants/Styles';
 
+import { FirebaseAuth } from '../../providers/firebase.js';
+
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 export default class MemberSettings extends React.Component {
 
- 
+  handleLogout = () => {
+    FirebaseAuth.logout()
+    .then(() => this.props.navigation.navigate('AuthLogin') )
+    .catch(  error => 
+        {alert(error);
+        console.log(error);
+        });
+  }
+
   render() {
     return ( 
     <View style = {{
@@ -83,7 +93,7 @@ export default class MemberSettings extends React.Component {
             justifyContent: 'center', 
             marginTop: 20,
           }}>
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('AuthLogin')}>
+          <TouchableOpacity onPress={() => this.handleLogout()}>
                 <View style = {{
                   width: SCREEN_WIDTH - 120,
                   height: 40,

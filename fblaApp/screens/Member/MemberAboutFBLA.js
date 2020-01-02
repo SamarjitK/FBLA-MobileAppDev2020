@@ -32,9 +32,10 @@ export default class MemberAboutFBLA extends React.Component {
                   fontWeight: '400',
                   textAlign: 'center',
                   justifyContent: 'center',
-                  width: '100%',
+                 
                   fontSize: 20,
                   fontWeight: '600',
+                  marginLeft: -40,
                   marginTop: 35
               }}>ABOUT FBLA</Text>
             }

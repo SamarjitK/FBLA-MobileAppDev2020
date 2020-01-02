@@ -4,19 +4,46 @@ import logo from '../../assets/images/fbla-logo.png';
 import { FormInput, FormValidationMessage, SocialIcon, Row, Header, Icon } from 'react-native-elements';
 import { Form, Item, Input, Label, Button } from 'native-base';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-
+import { FirebaseAuth } from 'C:\Sahil\Mobile App Dev\FBLA-MobileAppDev2020\fblaApp\providers\firebase.js';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 export default class AuthLogin extends React.Component {
-  componentWillMount() {
+  constructor() {
+    super();
     this.image = (<Image source={logo} style={{
       width: 230,
       height: 230,
       resizeMode: 'contain'
     }} />);
   }
+  state = { email: '', password: '', emailError: null, passwordError: null }
+
+  handleLogin = () => {
+    const { email, password } = this.state;
+
+    if(email == "") 
+    {
+      this.setState({emailError: 'Email required'})
+    }
+    if(password == "") 
+    {
+      this.setState({passwordError: 'Password required'})
+    }
+    if(email == "" || password == ""){
+      //alert('Username and Password required');
+      console.log('Username and Password required');
+      return;
+    }
+    FirebaseAuth.login(email, password)
+    .then(() => this.props.navigation.navigate('MemberTabNavigator') )
+    .catch(  error => 
+        {alert(error);
+        console.log(error);
+        });
+  }
+
     render() {
         return (
           <View>
@@ -69,19 +96,19 @@ export default class AuthLogin extends React.Component {
                           }}>   EMAIL
                           </Text>
 
-
-                          <FormInput
-                              style={{
-                                  fontSize: 16,
-                                  marginHorizontal: 10,
-                                  marginTop: 5,
-                                  color: 'gray'
-                              }}
-                              placeholder={'Enter email'}
-                              placeholderTextColor={'gray'}
-
+                          <FormInput onChangeText={(email) => {this.setState({ email: email }) 
+                            this.setState({ emailError: null }) }}
+                            style={{
+                              fontSize: 16,
+                              marginHorizontal: 10,
+                              marginTop: 5,
+                              color: 'gray'
+                            }}
+                            placeholder = {'Enter email'}
+                            placeholderTextColor = {'gray'}   
+                            value={this.state.email}                                                  
                           />
-                          <FormValidationMessage></FormValidationMessage>
+                          <FormValidationMessage>{this.state.emailError}</FormValidationMessage>
                       </View>
 
                       <View style={{
@@ -98,19 +125,20 @@ export default class AuthLogin extends React.Component {
                               fontWeight: '600'
                           }}>   PASSWORD
                           </Text>
-                          <FormInput
-                              secureTextEntry={true}
-                              style={{
-                                  fontSize: 16,
-                                  marginHorizontal: 10,
-                                  marginTop: 5,
-                                  color: 'gray'
-                              }}
-                              placeholder={'Enter password'}
-                              placeholderTextColor={'gray'}
-
+                          <FormInput onChangeText={(password) => {this.setState({ password: password }) 
+                            this.setState({ passwordError: null }) }}
+                            secureTextEntry={true}
+                            style={{
+                              fontSize: 16,
+                              marginHorizontal: 10,
+                              marginTop: 5,
+                              color: 'gray'
+                            }}
+                            placeholder = {'Enter password'}
+                            placeholderTextColor = {'gray'}   
+                            value={this.state.password}                                                  
                           />
-                          <FormValidationMessage></FormValidationMessage>
+                          <FormValidationMessage>{this.state.passwordError}</FormValidationMessage>
                       </View>
 
                       <TouchableOpacity
@@ -121,7 +149,7 @@ export default class AuthLogin extends React.Component {
                               justifyContent: 'center',
                               marginTop: 10,
                           }}
-                          onPress={() => this.props.navigation.navigate('MemberTabNavigator')}
+                          onPress={() => this.handleLogin(this.state.email, this.state.password)}
                       >
                           <Text style={{
                               color: 'rgb(255,255,255)',

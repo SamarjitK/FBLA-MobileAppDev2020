@@ -5,11 +5,13 @@ import { FormInput, FormValidationMessage, SocialIcon, Row, Header, Icon, Button
 import { Button } from 'native-base';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import styles from '../../constants/Styles';
+import { FirebaseAuth } from '../../providers/firebase.js';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 export default class AuthSignUp extends React.Component {
+    
     constructor () {
         super()
         this.state = {
@@ -22,6 +24,48 @@ export default class AuthSignUp extends React.Component {
         this.setState({selectedIndex})
       }
       
+      state = { name: '', 
+              nameError: null,
+              email: '', 
+              emailError: null,
+              password: '', 
+              passwordError: null,
+              school: '', 
+              schoolError: null,
+              grade: '9',              
+              cPassword: '', 
+              cPasswordError: null,
+              tncchecked: false, 
+              errorMessage: null }
+
+    handleSignUp = () => {
+      const { email, password} = this.state;
+      
+      if(email == "") {this.setState({emailError: "An email is required - please enter a valid email"}); return;}
+      if(password == "") {this.setState({passwordError: "A password is required - please enter a password"}); return;}
+      
+    /*
+      if(password != cPassword)
+      { this.setState({passwordError: "Password and Confirm Password didn't match"});
+        this.setState({cPasswordError: "Password and Confirm Password didn't match"});
+        return;
+        }   
+    */
+      FirebaseAuth.createAccount(email, password)
+      .then(() => 
+        {
+            FirebaseData.createTesterUserProfile(name, email );
+            this.props.navigation.navigate('MemberTabNavigator');
+        }
+        )
+      .catch(  error => 
+        {
+            alert(error);
+            console.log(error);
+        }
+        );
+    }
+
       render () {
         const buttons = ['Member', 'Admin']
         const { selectedIndex } = this.state
@@ -31,8 +75,8 @@ export default class AuthSignUp extends React.Component {
 
             <View>
                 <Header
-                    outerContainerStyles={{ zIndex: 1, height:90}}
-                    backgroundColor='rgb(255,255,255)'
+                  outerContainerStyles={{ zIndex: 1, height:90}}
+                  backgroundColor='rgb(255,255,255)'
                   innerContainerStyles = {{alignItems: 'center'}}
                   leftComponent ={
                   <Button transparent style = {styles.authBackButton} onPress={() => this.props.navigation.navigate('AuthDecision')}>
@@ -184,19 +228,19 @@ export default class AuthSignUp extends React.Component {
                         }}>   EMAIL
                         </Text>
 
-                        
-                        <FormInput
+                        <FormInput onChangeText={(email) => {this.setState({ email: email }) 
+                            this.setState({ emailError: null }) }}
                             style={{
                                 fontSize: 16,
                                 marginHorizontal: 10,
                                 marginTop: 5,
                                 color: 'gray'
                             }}
-                            placeholder={''}
-                            placeholderTextColor={'gray'}
-
+                            placeholder = {'Enter email'}
+                            placeholderTextColor = {'gray'}   
+                            value={this.state.email}                                                  
                         />
-                        <FormValidationMessage></FormValidationMessage>
+                        <FormValidationMessage>{this.state.emailError}</FormValidationMessage>
                     </View>
 
                     <View style={{
@@ -320,18 +364,21 @@ export default class AuthSignUp extends React.Component {
                         <Text>   least 8 characters</Text>
                         </Text>
 
-                        <FormInput
+
+                        <FormInput onChangeText={(password) => {this.setState({ password: password }) 
+                            this.setState({ passwordError: null }) }}
+                            secureTextEntry={true}
                             style={{
                                 fontSize: 16,
                                 marginHorizontal: 10,
                                 marginTop: 5,
                                 color: 'gray'
                             }}
-                            placeholder={''}
-                            placeholderTextColor={'gray'}
-                            secureTextEntry={true}
+                            placeholder = {'Enter password'}
+                            placeholderTextColor = {'gray'}   
+                            value={this.state.password}                                                  
                         />
-                        <FormValidationMessage></FormValidationMessage>
+                        <FormValidationMessage>{this.state.passwordError}</FormValidationMessage>
                     </View>
 
                     <View style={{
@@ -379,7 +426,7 @@ export default class AuthSignUp extends React.Component {
                         justifyContent: 'center',
                         marginTop: 10,
                     }}
-                    onPress={() => this.props.navigation.navigate('MemberTabNavigator')}
+                    onPress={() => this.handleSignUp()}
                 >
                     <Text style={{
                         color: 'rgb(255,255,255)',
