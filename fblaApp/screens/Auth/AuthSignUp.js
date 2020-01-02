@@ -54,7 +54,7 @@ export default class AuthSignUp extends React.Component {
       FirebaseAuth.createAccount(email, password)
       .then(() => 
         {
-            FirebaseData.createTesterUserProfile(name, email );
+            //FirebaseData.createTesterUserProfile(name, email );
             this.props.navigation.navigate('MemberTabNavigator');
         }
         )

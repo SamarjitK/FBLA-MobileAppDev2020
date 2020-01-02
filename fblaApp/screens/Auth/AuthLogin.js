@@ -4,7 +4,7 @@ import logo from '../../assets/images/fbla-logo.png';
 import { FormInput, FormValidationMessage, SocialIcon, Row, Header, Icon } from 'react-native-elements';
 import { Form, Item, Input, Label, Button } from 'native-base';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-import { FirebaseAuth } from 'C:\Sahil\Mobile App Dev\FBLA-MobileAppDev2020\fblaApp\providers\firebase.js';
+import { FirebaseAuth } from '../../providers/firebase.js';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
