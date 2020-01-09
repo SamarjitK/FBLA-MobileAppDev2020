@@ -67,7 +67,7 @@ export default class AuthLogin extends React.Component {
             />
             <KeyboardAwareScrollView
               scrollEnabled = {false}
-              extraHeight = {100}
+              extraHeight = {175}
             >
               <View style = {{alignItems: 'center', justifyContent: 'center', marginTop: 16, marginBottom: 60}}>
                   {this.image}

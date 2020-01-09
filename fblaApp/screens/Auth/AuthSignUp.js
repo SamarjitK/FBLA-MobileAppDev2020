@@ -95,7 +95,7 @@ export default class AuthSignUp extends React.Component {
                 />
             <KeyboardAwareScrollView
                 showsVerticalScrollIndicator={false}
-                extraHeight = {100}
+                extraHeight = {175}
                 style = {{marginBottom: 60}}
             >
                 <View style={{
@@ -236,7 +236,7 @@ export default class AuthSignUp extends React.Component {
                                 marginTop: 5,
                                 color: 'gray'
                             }}
-                            placeholder = {'Enter email'}
+                            placeholder = {''}
                             placeholderTextColor = {'gray'}   
                             value={this.state.email}                                                  
                         />
@@ -361,7 +361,7 @@ export default class AuthSignUp extends React.Component {
                         
                         <Text>   Must include a symbol or number and have at</Text>
                         {"\n"}
-                        <Text>   least 8 characters</Text>
+                        <Text>   least 6 characters</Text>
                         </Text>
 
 
@@ -374,7 +374,7 @@ export default class AuthSignUp extends React.Component {
                                 marginTop: 5,
                                 color: 'gray'
                             }}
-                            placeholder = {'Enter password'}
+                            placeholder = {''}
                             placeholderTextColor = {'gray'}   
                             value={this.state.password}                                                  
                         />
