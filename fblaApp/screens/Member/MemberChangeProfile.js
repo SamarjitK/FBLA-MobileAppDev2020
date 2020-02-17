@@ -263,6 +263,33 @@ export default class MemberChangeProfile extends React.Component {
                     }}>PASSWORD
                     </Text>
                     <View style={{
+                        marginBottom: 30,
+                        width: SCREEN_WIDTH - 55,
+                        height: 55,
+                        borderRadius: 5,
+                    }}>
+                        <Text style={{
+                            fontSize: 15,
+                            marginHorizontal: 9,
+                            color: 'rgb(60,60,60)',
+                            fontWeight: '600'
+                        }}>   OLD PASSWORD
+                        </Text>
+                        
+                        <FormInput
+                            style={{
+                                fontSize: 16,
+                                marginHorizontal: 10,
+                                marginTop: 5,
+                                color: 'gray'
+                            }}
+                            placeholder={''}
+                            placeholderTextColor={'gray'}
+                            secureTextEntry={true}
+                        />
+                        <FormValidationMessage></FormValidationMessage>
+                    </View>
+                    <View style={{
                         marginBottom: 60,
                         width: SCREEN_WIDTH - 55,
                         height: 55,
@@ -273,7 +300,7 @@ export default class MemberChangeProfile extends React.Component {
                             marginHorizontal: 9,
                             color: 'rgb(60,60,60)',
                             fontWeight: '600'
-                        }}>   PASSWORD
+                        }}>   NEW PASSWORD
                         </Text>
                         <Text style={{
                             fontSize: 13,
@@ -314,7 +341,7 @@ export default class MemberChangeProfile extends React.Component {
                             marginHorizontal: 9,
                             color: 'rgb(60,60,60)',
                             fontWeight: '600'
-                        }}>   CONFIRM PASSWORD
+                        }}>   CONFIRM NEW PASSWORD
                         </Text>
 
 

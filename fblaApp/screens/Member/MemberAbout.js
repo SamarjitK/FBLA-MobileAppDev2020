@@ -53,7 +53,7 @@ export default class MemberAbout extends React.Component {
                     <CardItem header bordered>
                         <Text style={{
                             color: 'black',
-                            fontSize: 20,
+                            fontSize: 17,
                             fontWeight: '600',
                             textAlign: 'left',
                             width:'100%',
@@ -89,7 +89,7 @@ export default class MemberAbout extends React.Component {
                     </CardItem>
                     <CardItem footer bordered button onPress={() => this.props.navigation.navigate('MemberAboutFBLA')}>
                       <Body style={{ justifyContent: 'center' }}>
-                        <Text style={{ fontSize: 18, fontWeight: '600', color: 'rgb(50,50,50)' }}>Learn More</Text>
+                        <Text style={{ fontSize: 17, fontWeight: '600', color: 'rgb(50,50,50)' }}>Learn More</Text>
                       </Body>
                       <Right>
                         <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
@@ -99,7 +99,7 @@ export default class MemberAbout extends React.Component {
                     </CardItem>
                     <CardItem footer bordered button onPress={() => this.props.navigation.navigate('MemberOfficers')}>
                       <Body style={{ justifyContent: 'center' }}>
-                        <Text style={{ fontSize: 18, fontWeight: '600', color: 'rgb(50,50,50)' }}>National Officers</Text>
+                        <Text style={{ fontSize: 17, fontWeight: '600', color: 'rgb(50,50,50)' }}>National Officers</Text>
                       </Body>
                       <Right>
                         <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
@@ -112,7 +112,7 @@ export default class MemberAbout extends React.Component {
                     <CardItem header bordered>
                         <Text style={{
                             color: 'black',
-                            fontSize: 20,
+                            fontSize: 17,
                             fontWeight: '600',
                             textAlign: 'left',
                             width:'100%',
@@ -135,7 +135,7 @@ export default class MemberAbout extends React.Component {
                     }}>CHAPTER OFFICER TEAM</Text>
                     </CardItem>
                     <CardItem style={{ alignItems: 'center' }}>
-                        <Text style={{ fontSize: 15, fontWeight: '400', color: 'black' }}>
+                        <Text style={{ fontSize: 17, fontWeight: '400', color: 'black' }}>
                           Will add stuff here
                         </Text>
                     </CardItem>

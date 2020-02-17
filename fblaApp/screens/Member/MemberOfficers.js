@@ -45,7 +45,7 @@ export default class MemberOfficers extends React.Component {
                   fontSize: 20,
                   fontWeight: '600',
                   marginLeft: -40,
-                  marginTop: 35
+                  marginTop: 36
               }}>NATIONAL OFFICERS</Text>
             }
         >

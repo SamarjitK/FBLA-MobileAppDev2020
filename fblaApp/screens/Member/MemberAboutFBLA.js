@@ -36,7 +36,7 @@ export default class MemberAboutFBLA extends React.Component {
                   fontSize: 20,
                   fontWeight: '600',
                   marginLeft: -40,
-                  marginTop: 35
+                  marginTop: 36
               }}>ABOUT FBLA</Text>
             }
         >

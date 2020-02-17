@@ -135,6 +135,7 @@ export class FirebaseDataClass {
   }
 }
 
+/*
 updateEvents() 
 {
 
@@ -156,6 +157,6 @@ updateEvents()
       return false;
   }
 }
-
+*/
 
 export let FirebaseData = new FirebaseDataClass;

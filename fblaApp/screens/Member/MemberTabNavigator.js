@@ -40,6 +40,7 @@ const HomeStack = createStackNavigator({
 
 const EventsStack = createStackNavigator({
     MemberEvents: { screen: MemberEvents },
+    
   },
   {
     headerMode: 'none',
