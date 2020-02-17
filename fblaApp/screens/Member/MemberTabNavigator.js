@@ -5,12 +5,16 @@ import { createStackNavigator } from 'react-navigation-stack'
 import TabBarIcon from '../../components/TabBarIcon';
 import MemberHome from './MemberHome.js';
 import MemberEvents from './MemberEvents.js';
+import MemberAllEvents from './MemberAllEvents.js';
+import MemberEventDetails from './MemberEventDetails.js';
 import MemberAbout from './MemberAbout.js';
 import MemberCalendar from './MemberCalendar.js';
 import MemberSettings from './MemberSettings.js';
 import MemberChangeProfile from './MemberChangeProfile.js';
 import MemberAboutFBLA from './MemberAboutFBLA.js'
 import MemberOfficers from './MemberOfficers'
+import SettingsQandA from './SettingsQandA';
+
 
 const HomeStack = createStackNavigator({
     MemberHome: { screen: MemberHome },
@@ -40,7 +44,8 @@ const HomeStack = createStackNavigator({
 
 const EventsStack = createStackNavigator({
     MemberEvents: { screen: MemberEvents },
-    
+    MemberAllEvents: {screen: MemberAllEvents},
+    MemberEventDetails: {screen: MemberEventDetails},
   },
   {
     headerMode: 'none',
@@ -118,7 +123,7 @@ AboutStack.navigationOptions = {
 
 const SettingsStack = createStackNavigator({
   MemberSettings: { screen: MemberSettings },
-  
+  SettingsQandA: {screen: SettingsQandA}
 },
 {
   headerMode: 'none',

@@ -13,14 +13,14 @@ export default class MemberSettings extends React.Component {
   handleLogout = () => {
     FirebaseAuth.logout()
     .then(() => this.props.navigation.navigate('AuthLogin') )
-    .catch(  error => 
+    .catch(  error =>
         {alert(error);
         console.log(error);
         });
   }
 
   render() {
-    return ( 
+    return (
     <View style = {{
         flex:1,
         width:SCREEN_WIDTH,
@@ -44,9 +44,9 @@ export default class MemberSettings extends React.Component {
               }}>SETTINGS</Text>
             }
         />
-        
+
           <Card>
-          <CardItem bordered button onPress={() => this.props.navigation.navigate('PlayerOnboarding')} >
+          <CardItem bordered button onPress={() => this.props.navigation.navigate('SettingsQandA')} >
               <Body style = {{ justifyContent: 'center'}}>
                 <Text style = {{fontSize: 15, fontWeight:'600', color: 'rgb(50,50,50)'}}>Q and A</Text>
               </Body>
@@ -55,7 +55,7 @@ export default class MemberSettings extends React.Component {
                 <Icon name = 'ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
               </View>
               </Right>
-            </CardItem>           
+            </CardItem>
             <CardItem bordered button onPress={() => this.props.navigation.navigate('PlayerOnboarding')} >
               <Body style = {{ justifyContent: 'center'}}>
                 <Text style = {{fontSize: 15, fontWeight:'600', color: 'rgb(50,50,50)'}}>Licensing</Text>
@@ -90,7 +90,7 @@ export default class MemberSettings extends React.Component {
           </Card>
           <View style = {{
             alignItems: 'center',
-            justifyContent: 'center', 
+            justifyContent: 'center',
             marginTop: 20,
           }}>
           <TouchableOpacity onPress={() => this.handleLogout()}>
