@@ -19,14 +19,14 @@ import SettingsQandA from './SettingsQandA';
 const HomeStack = createStackNavigator({
     MemberHome: { screen: MemberHome },
     MemberChangeProfile: {screen: MemberChangeProfile}
-  }, 
+  },
   {
     headerMode: 'none',
     lazy:false,
     navigationOptions: {
         headerVisible: false,
     },
-    
+
     initialRouteName: 'MemberHome',
   });
 
@@ -53,14 +53,14 @@ const EventsStack = createStackNavigator({
     navigationOptions: {
         headerVisible: false,
     },
-    
+
     initialRouteName: 'MemberEvents',
   });
-  
-  
+
+
   EventsStack.navigationOptions = {
     tabBarLabel: <Text style={{ fontSize: 12, fontWeight: "bold", color: 'rgb(0,82,155)' }}>Events</Text>,
-  
+
     tabBarIcon: ({ focused }) => (
       <TabBarIcon
         focused={focused}
@@ -78,16 +78,16 @@ const CalendarStack = createStackNavigator({
   navigationOptions: {
       headerVisible: false,
   },
-  
+
   initialRouteName: 'MemberCalendar',
 });
-  
+
 CalendarStack.navigationOptions = {
     tabBarLabel: <Text style={{ fontSize: 12, fontWeight: "bold", color: 'rgb(0,82,155)' }}>Calendar</Text>,
     tabBarIcon: ({ focused }) => (
       <TabBarIcon
         focused={focused}
-        
+
         name={Platform.OS === 'ios' ? 'ios-calendar' : 'md-calendar'}
         style = 'light'
       />
@@ -105,16 +105,16 @@ const AboutStack = createStackNavigator({
   navigationOptions: {
       headerVisible: false,
   },
-  
+
   initialRouteName: 'MemberAbout',
 });
-  
+
 AboutStack.navigationOptions = {
     tabBarLabel: <Text style={{ fontSize: 12, fontWeight: "bold", color: 'rgb(0,82,155)' }}>About</Text>,
     tabBarIcon: ({ focused }) => (
       <TabBarIcon
         focused={focused}
-        
+
         name={Platform.OS === 'ios' ? 'ios-information-circle-outline' : 'md-information-circle-outline'}
         style = 'light'
       />
@@ -131,7 +131,7 @@ const SettingsStack = createStackNavigator({
   navigationOptions: {
       headerVisible: false,
   },
-  
+
   initialRouteName: 'MemberSettings',
 });
 
@@ -144,7 +144,7 @@ SettingsStack.navigationOptions = {
       name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
     />
   ),
-   
+
 };
 
 
@@ -155,12 +155,11 @@ export default createMaterialBottomTabNavigator({
   CalendarStack: {screen: CalendarStack},
   AboutStack: {screen: AboutStack},
   SettingsStack: { screen: SettingsStack },
-  
-}, 
+
+},
 {
   initialRouteName: 'HomeStack',
   barStyle: { backgroundColor: 'white' },
   lazy:false,
-  
-});
 
+});

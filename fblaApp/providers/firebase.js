@@ -4,33 +4,33 @@ import firebase from './firebaseConfig';
 class FirebaseAuthClass {
 
 //returns the information about signed in user
-    getAuth() {      
+    getAuth() {
         return firebase.auth();
     }
 
 //Sign-in existing users
-    login(email, password) {      
+    login(email, password) {
         return firebase.auth().signInWithEmailAndPassword(email, password);
     }
 //Sign-out logged in user
-    logout() {    
+    logout() {
         return firebase.auth().signOut();
     }
 
 //Sign-up new user using email and password
-    createAccount(email, password) {  
+    createAccount(email, password) {
         return firebase.auth().createUserWithEmailAndPassword(email, password)
     }
 
-    getUserID() {    
+    getUserID() {
         return firebase.auth().currentUser.uid;
     }
 
-    getUser() {   
+    getUser() {
         return firebase.auth().currentUser;
     }
 
-    deleteAccount() {   
+    deleteAccount() {
         return firebase.auth().currentUser.delete();
     }
 
@@ -57,9 +57,9 @@ export class FirebaseDataClass {
       grade: grade,
       chapterName: chapterName,
       shirtSize: shirtSize
-    }    
+    }
 
-    try{ 
+    try{
         var ref = firebase.database().ref(`members/${firebase.auth().currentUser.uid}`);
         ref.child('Profile').set(null);
         ref.child('Profile').push(userProfile);
@@ -76,10 +76,10 @@ export class FirebaseDataClass {
 
   //Gets profile details of Member
   getMemberProfile() {
-    try{ 
-        var ref = firebase.database().ref(`members/${firebase.auth().currentUser.uid}`);      
-          ref.child('Profile').on('value', (snap) => {  
-                  snap.forEach((child) => {      
+    try{
+        var ref = firebase.database().ref(`members/${firebase.auth().currentUser.uid}`);
+          ref.child('Profile').on('value', (snap) => {
+                  snap.forEach((child) => {
                       var userProfile = {
                         name: child.val().name,
                         email: child.val().email,
@@ -89,7 +89,7 @@ export class FirebaseDataClass {
                     };
                     global.userProfile = userProfile;
                     return userProfile;
-                  });                               
+                  });
         });
     }
     catch(e)
@@ -100,13 +100,13 @@ export class FirebaseDataClass {
     }
   }
 
-  signUpForEvent(name) 
+  signUpForEvent(name)
   {
     var eventProfile = {
       eventName: name
-    }    
+    }
 
-    try{ 
+    try{
         var ref = firebase.database().ref(`members/${firebase.auth().currentUser.uid}`);
         ref.child('Events').push(eventProfile);
         return true;
@@ -122,9 +122,9 @@ export class FirebaseDataClass {
   getListOfRegisteredEventsForCurrentMember()
   {
     var ref = firebase.database().ref(`members/${firebase.auth().currentUser.uid}`);
-    ref.child('Events').on('value', (snap) => { 
-    let events = [];   
-      snap.forEach((child) => {   
+    ref.child('Events').on('value', (snap) => {
+    let events = [];
+      snap.forEach((child) => {
         events.push({
           eventName: name
         });
@@ -135,15 +135,14 @@ export class FirebaseDataClass {
   }
 }
 
-/*
-updateEvents() 
+/*updateEvents()
 {
 
   try
-  { 
+  {
       var ref = firebase.database().ref(`members/${firebase.auth().currentUser.uid}`);
       ref.child('Events').set(null);
-      for (var i=0; i < global.memberEvents.length; i++) 
+      for (var i=0; i < global.memberEvents.length; i++)
       {
         var eventProfile = {eventName: global.memberEvents[i]}
         ref.child('Events').push(eventProfile);
