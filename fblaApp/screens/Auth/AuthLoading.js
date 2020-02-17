@@ -28,8 +28,9 @@ export default class AuthLoading extends React.Component {
                 height: 205,
                 resizeMode: 'contain'
             }} />
-
-            <Text onPress={() => this.props.navigation.navigate('AuthDecision')}>Click here to go to login</Text>
+            <View style = {{alignItems: 'center', justifyContent: 'center', marginHorizontal: 20}}>
+              <ActivityIndicator style = {{marginTop: 20}} size="large" />
+            </View>
         </View>
     </View>
     )

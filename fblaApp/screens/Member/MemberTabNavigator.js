@@ -9,6 +9,7 @@ import MemberAllEvents from './MemberAllEvents.js';
 import MemberEventDetails from './MemberEventDetails.js';
 import MemberAbout from './MemberAbout.js';
 import MemberCalendar from './MemberCalendar.js';
+import MemberAddCalendarEvent from './MemberAddCalendarEvent.js'
 import MemberSettings from './MemberSettings.js';
 import MemberChangeProfile from './MemberChangeProfile.js';
 import MemberAboutFBLA from './MemberAboutFBLA.js'
@@ -71,6 +72,7 @@ const EventsStack = createStackNavigator({
 
 const CalendarStack = createStackNavigator({
     MemberCalendar: { screen: MemberCalendar },
+    MemberAddCalendarEvent: {screen: MemberAddCalendarEvent},
 },
 {
   headerMode: 'none',

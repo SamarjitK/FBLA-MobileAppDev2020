@@ -35,6 +35,11 @@ export default class MemberCalendar extends React.Component {
                     marginTop: 35
                 }}>CALENDAR</Text>
               }
+              rightComponent = {
+                <Button transparent style = {{ marginTop: 35, justifyContent: 'flex-start', alignItems: 'center', marginRight: 10}} onPress={() => this.props.navigation.navigate('MemberAddCalendarEvent')}>
+                    <Icon style = {{height:30, width:30}} name = 'ios-add-circle-outline' type='ionicon' size = {26} color='white' />
+                </Button>
+            }
         />
         
             <Agenda/>
