@@ -85,7 +85,7 @@ export default class AuthSignUp extends React.Component {
                   }
                   centerComponent = {
                     <View style = {{alignItems: 'center', justifyContent: 'center', marginTop: 33, marginLeft: -40}}>
-                        <Text style = {{fontSize: 25, fontWeight: '700', color: 'rgb(80,80,80)'}}>Join FBLA</Text>
+                        <Text style = {{fontSize: 22, fontWeight: '700', color: 'rgb(80,80,80)'}}>Join FBLA</Text>
                     </View>
                     
                   }

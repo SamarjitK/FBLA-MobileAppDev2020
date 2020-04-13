@@ -41,7 +41,7 @@ export default class AuthSignUpAdmin extends React.Component {
                   }
                   centerComponent = {
                     <View style = {{alignItems: 'center', justifyContent: 'center', marginTop: 35, marginLeft: -40}}>
-                        <Text style = {{fontSize: 22, fontWeight: '700', color: 'rgb(80,80,80)'}}>JOIN AS ADMIN</Text>
+                        <Text style = {{fontSize: 20, fontWeight: '700', color: 'rgb(80,80,80)'}}>JOIN AS ADMIN</Text>
                     </View>
                     
                   }
