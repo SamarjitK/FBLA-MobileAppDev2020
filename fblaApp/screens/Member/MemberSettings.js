@@ -86,7 +86,16 @@ export default class MemberSettings extends React.Component {
               </View>
               </Right>
             </CardItem>
-
+            <CardItem bordered button onPress={() => this.props.navigation.navigate('AdminTabNavigator')} >
+              <Body style = {{ justifyContent: 'center'}}>
+                <Text style = {{fontSize: 15, fontWeight:'600', color: 'rgb(50,50,50)'}}>Temp to Admin Tab Navigator</Text>
+              </Body>
+              <Right>
+              <View style = {{ justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+                <Icon name = 'ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+              </View>
+              </Right>
+            </CardItem>
           </Card>
           <View style = {{
             alignItems: 'center',

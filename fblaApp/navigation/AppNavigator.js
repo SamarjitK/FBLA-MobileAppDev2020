@@ -9,11 +9,11 @@ import AuthSignUp from '../screens/Auth/AuthSignUp';
 import AuthSignUpAdmin from '../screens/Auth/AuthSignUpAdmin';
 //import AuthTabNavigator from '../screens/Auth/AuthTabNavigator';
 import MemberTabNavigator from '../screens/Member/MemberTabNavigator.js';
+import AdminTabNavigator from '../screens/Admin/AdminTabNavigator.js';
+
 import Terms from '../screens/Auth/Terms';
 
-const MemberAuthStack = createStackNavigator({
-    PlayerAuthLoading: {screen: AuthLoading}
-});
+
 const AuthStack = createStackNavigator({
     
     AuthDecision: {screen: AuthDecision},
@@ -37,7 +37,7 @@ export default createAppContainer(createSwitchNavigator(
       AuthLoading: {screen: AuthLoading},
       AuthStack: AuthStack,
       MemberTabNavigator: {screen: MemberTabNavigator},
-      MemberAuthStack: MemberAuthStack,
+      AdminTabNavigator: {screen: AdminTabNavigator}
       
     },
     {

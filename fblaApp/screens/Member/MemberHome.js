@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Dimensions, Text, ScrollView } from 'react-native'
 import { Header, Icon } from 'react-native-elements';
-import {Button, Card, CardItem, Body, Right} from 'native-base';
+import {Button, Card, CardItem, Body, Right, Row} from 'native-base';
 import styles from '../../constants/Styles';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -43,7 +43,7 @@ export default class MemberHome extends React.Component {
               }
         />
         <ScrollView
-            showsVerticalScrollIndicator = {true}
+            showsVerticalScrollIndicator = {false}
         >
         <View style = {{
             justifyContent: 'center',
@@ -59,14 +59,23 @@ export default class MemberHome extends React.Component {
                             width:'100%',
                     }}>ANNOUNCEMENTS</Text>
                     </CardItem>
-                    <CardItem style={{ alignItems: 'center' }}>
-                        <Text style={{ fontSize: 15, fontWeight: '400', color: 'black' }}>
-                          FBLA is the high school division of Future Business Leaders of America-Phi Beta Lambda, Inc. FBLA helps high school students prepare for careers in business through academic competitions (FBLA Competitive Events), leadership development, and educational programs.
-                          {"\n\n"}
-                          FBLA members demonstrate their leadership skills through community service projects, fundraising activities, and chapter officer positions.
-                          {"\n\n"}
-                          FBLA’s National Awards Program, also called competitive events, give students the opportunity to compete against the best-of-the-best in over 60 academic events that cover technology, public speaking, business, finance, management, and more. The top winners take home trophies and cash from sponsored events.
-                        </Text>
+                    {/*First announcement*/}
+                    <CardItem bordered>     
+                        <Body>
+                            <Text style = {{fontWeight:'600', fontSize: 17, color: 'rgb(75,75,75)', marginVertical: 4 }}>February 17th, 2020</Text>
+                            <Row style = {{alignItems: 'center', width: 500, marginTop: 5}}>
+                                <Text style = {{fontWeight:'600', fontSize: 16, color: 'rgb(253,184,19)' }}>Immediate Action Required  </Text>
+                                <Icon name='circle' type='font-awesome' size = {5} color='rgb(150,150,150)' /> 
+                                <Text style = {{fontSize: 16, fontWeight: '600', color: 'rgb(125,125,125)'}}>  All Members</Text>
+                            </Row>
+                            <Text style={{ fontSize: 15, marginTop: 10, fontWeight: '400', color: 'black' }}>
+                            FBLA is the high school division of Future Business Leaders of America-Phi Beta Lambda, Inc. FBLA helps high school students prepare for careers in business through academic competitions (FBLA Competitive Events), leadership development, and educational programs.
+                            {"\n\n"}
+                            FBLA members demonstrate their leadership skills through community service projects, fundraising activities, and chapter officer positions.
+                            {"\n\n"}
+                            FBLA’s National Awards Program, also called competitive events, give students the opportunity to compete against the best-of-the-best in over 60 academic events that cover technology, public speaking, business, finance, management, and more. The top winners take home trophies and cash from sponsored events.
+                            </Text>
+                            </Body>                           
                     </CardItem>
                 </Card>
 
@@ -78,13 +87,13 @@ export default class MemberHome extends React.Component {
                             fontWeight: '600',
                             textAlign: 'left',
                             width:'100%',
-                    }}>TODAY'S EVENTS</Text>
+                    }}>UPCOMING EVENTS</Text>
                     </CardItem>
                     
                     <CardItem style={{ alignItems: 'center' }}>
                         <Body >
                           <Text style={{ fontSize: 15, marginVertical: 5, alignSelf: 'center', fontWeight: '400', color: 'rgb(100,100,100)' }}>
-                            There are no events to show today
+                            There are no upcoming events
                           </Text>
                         </Body>
                         

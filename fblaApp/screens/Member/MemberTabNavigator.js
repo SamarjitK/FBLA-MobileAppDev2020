@@ -16,7 +16,29 @@ import MemberAboutFBLA from './MemberAboutFBLA.js'
 import MemberOfficers from './MemberOfficers'
 import SettingsQandA from './SettingsQandA';
 
+const BottomTransition = (index, position, height) => {
+  const sceneRange = [index - 1, index];
+  const outputHeight = [height, 0];
+  const transition = position.interpolate({
+    inputRange: sceneRange,
+    outputRange: outputHeight,
+  });
+  return{
+    transform: [{translateY: transition}]
+  }
+}
+const NavigationConfig = () => {
+  return {
+    screenInterpolator: (sceneProps) => {
+      const position = sceneProps.position;
+      const scene = sceneProps.scene;
+      const index = scene.index;
+      const height = sceneProps.layout.initHeight;
 
+      return BottomTransition(index, position, height)
+    }
+  }
+}
 const HomeStack = createStackNavigator({
     MemberHome: { screen: MemberHome },
     MemberChangeProfile: {screen: MemberChangeProfile}
@@ -27,6 +49,7 @@ const HomeStack = createStackNavigator({
     navigationOptions: {
         headerVisible: false,
     },
+    //transitionConfig: NavigationConfig,
 
     initialRouteName: 'MemberHome',
   });
