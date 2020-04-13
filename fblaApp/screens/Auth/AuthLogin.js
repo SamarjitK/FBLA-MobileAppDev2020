@@ -58,7 +58,7 @@ export default class AuthLogin extends React.Component {
               }
               centerComponent = {
                 <View style = {{alignItems: 'flex-start', justifyContent: 'flex-start', marginTop: 30, marginLeft: -40}}>
-                    <Text style = {{fontSize: 25, fontWeight: '700', color: 'rgb(80,80,80)'}}>Sign In</Text>
+                    <Text style = {{fontSize: 22, fontWeight: '700', color: 'rgb(80,80,80)'}}>Sign In</Text>
                 </View>
               }
               containerStyle={{
