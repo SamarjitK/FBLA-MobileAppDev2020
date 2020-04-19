@@ -7,9 +7,12 @@ import MemberHome from './MemberHome.js';
 import MemberEvents from './MemberEvents.js';
 import MemberAllEvents from './MemberAllEvents.js';
 import MemberEventDetails from './MemberEventDetails.js';
+import MemberEventDVP from './MemberEventDVP.js';
+import MemberAddCompEvent from './MemberAddCompEvent.js';
+import MemberMyEventDetails from './MemberMyEventDetails.js';
 import MemberAbout from './MemberAbout.js';
 import MemberCalendar from './MemberCalendar.js';
-//import MemberAddCalendarEvent from './MemberAddCalendarEvent.js'
+import MemberAddCalendarEvent from './MemberAddCalendarEvent.js'
 import MemberSettings from './MemberSettings.js';
 import MemberChangeProfile from './MemberChangeProfile.js';
 import MemberAboutFBLA from './MemberAboutFBLA.js'
@@ -68,8 +71,12 @@ const HomeStack = createStackNavigator({
 
 const EventsStack = createStackNavigator({
     MemberEvents: { screen: MemberEvents },
+    MemberMyEventDetails: {screen: MemberMyEventDetails},
     MemberAllEvents: {screen: MemberAllEvents},
+    MemberEventDVP: {screen: MemberEventDVP},
     MemberEventDetails: {screen: MemberEventDetails},
+    MemberAddCompEvent: {screen: MemberAddCompEvent},
+    
   },
   {
     headerMode: 'none',
@@ -95,7 +102,7 @@ const EventsStack = createStackNavigator({
 
 const CalendarStack = createStackNavigator({
     MemberCalendar: { screen: MemberCalendar },
-    //MemberAddCalendarEvent: {screen: MemberAddCalendarEvent},
+    MemberAddCalendarEvent: {screen: MemberAddCalendarEvent},
 },
 {
   headerMode: 'none',

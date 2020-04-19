@@ -1,14 +1,16 @@
 import React from 'react'
-import { View, Dimensions, Text, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Dimensions, Text, ScrollView, TouchableOpacity, YellowBox } from 'react-native'
 import { Header, Icon } from 'react-native-elements';
 import {Button, Card, CardItem, Body, Right, Left, Row} from 'native-base'
 import styles from '../../constants/Styles';
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
-
+YellowBox.ignoreWarnings([
+    'VirtualizedLists should never be nested', // TODO: Remove when fixed
+  ])
 export default class MemberEvents extends React.Component {
-
+    
  
   render() {
     return ( 
@@ -58,8 +60,8 @@ export default class MemberEvents extends React.Component {
                             fontSize: 17,
                             fontWeight: '600',
                             textAlign: 'left',
-                            width:'100%',
-                    }}>YOUR EVENTS</Text>
+                            width:500,
+                    }}>YOUR COMPETITIVE EVENTS</Text>
                     </Body>
                         <Right style = {{}}>
                             
@@ -92,13 +94,13 @@ export default class MemberEvents extends React.Component {
                     </CardItem>
 
                     {/*Second event*/} 
-                    <CardItem bordered>     
+                    <CardItem bordered button onPress={() => this.props.navigation.navigate('MemberMyEventDetails')}>     
                         <Body>
-                            <Text style = {{fontWeight:'600', fontSize: 17, color: 'rgb(75,75,75)', marginVertical: 4 }}>Client Service</Text>
+                            <Text style = {{fontWeight:'600', fontSize: 17, width: 500, color: 'rgb(75,75,75)', marginVertical: 4 }}>Digital Video Production</Text>
                             <Row style = {{alignItems: 'center', width: 500}}>
-                                <Text style = {{fontWeight:'600', fontSize: 13, color: 'rgb(125,125,125)' }}>Presentation without Equipment  </Text>
+                                <Text style = {{fontWeight:'600', fontSize: 13, color: 'rgb(125,125,125)' }}>Presentation with Equipment  </Text>
                                 <Icon name='circle' type='font-awesome' size = {5} color='rgb(150,150,150)' /> 
-                                <Text style = {{fontSize: 13, fontWeight: '600', color: 'rgb(125,125,125)'}}>  Individual</Text>
+                                <Text style = {{fontSize: 13, fontWeight: '600', color: 'rgb(125,125,125)'}}>  Team</Text>
                             </Row>
                         </Body>
                         <Right>
@@ -152,6 +154,33 @@ export default class MemberEvents extends React.Component {
                         </View>
                       </Right>
                     </CardItem>
+                </Card>
+
+                <Card style={{ width: SCREEN_WIDTH - 20, alignItems: 'flex-start', }}>
+                    <CardItem header bordered style = {{justifyContent: 'center'}}>
+                    <Body>
+                    <Text style={{
+                            color: 'black',
+                            marginTop: 3,
+                            fontSize: 17,
+                            fontWeight: '600',
+                            textAlign: 'left',
+                            width:500,
+                    }}>YOUR CURRENT EVENTS</Text>
+                    </Body>
+                        <Right style = {{}}>
+                            
+                            <TouchableOpacity style={{ justifyContent: 'flex-end', marginRight: 5, alignItems: 'flex-end'}} >
+                            <Icon name='edit' size = {24} type='fontawesome' color='rgb(150,150,150)' />
+                            </TouchableOpacity>
+                            
+                            
+                            
+                            
+                        </Right>    
+                    </CardItem>
+
+                    
                 </Card>
                 
 

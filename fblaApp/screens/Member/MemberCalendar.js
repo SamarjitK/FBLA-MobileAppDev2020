@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Dimensions, Text, ScrollView } from 'react-native'
+import { View, Dimensions, Text, ScrollView, YellowBox } from 'react-native'
 import { Header, Icon } from 'react-native-elements';
 import {Button} from 'native-base'
 import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
@@ -7,6 +7,12 @@ import styles from '../../constants/Styles';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
+
+YellowBox.ignoreWarnings([
+  'componentWillReceiveProps', // TODO: Remove when fixed
+  'componentWillMount', // TODO: Remove when fixed
+])
+
 export default class MemberCalendar extends React.Component {
 
  

@@ -201,6 +201,257 @@ export default class MemberAllEvents extends React.Component {
                                     </View>
                                 </Right>
                             </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Business Law</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Business Plan</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem itemDivider style = {{backgroundColor: 'rgb(230,230,230)'}}>
+                                <Text>C</Text>
+                            </ListItem>  
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Client Service</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Coding and Programming</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Community Service Project</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Computer Applications</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Computer Game & Simulation Programming</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Computer Problem Solving</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Cyber Security</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem itemDivider style = {{backgroundColor: 'rgb(230,230,230)'}}>
+                                <Text>D</Text>
+                            </ListItem>  
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Database Design & Applications</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem button onPress={() => this.props.navigation.navigate('MemberEventDVP')}>
+                                <Body style={{ justifyContent: 'center' }} >
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Digital Video Production</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem itemDivider style = {{backgroundColor: 'rgb(230,230,230)'}}>
+                                <Text>E</Text>
+                            </ListItem>  
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>E-business</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Economics</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Electronic Career Portfolio</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Emerging Business Isues</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Entrepreneurship</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem itemDivider style = {{backgroundColor: 'rgb(230,230,230)'}}>
+                                <Text>F</Text>
+                            </ListItem>  
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Future Business Leader</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem itemDivider style = {{backgroundColor: 'rgb(230,230,230)'}}>
+                                <Text>G</Text>
+                            </ListItem>  
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Global Business</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Graphic Design</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem itemDivider style = {{backgroundColor: 'rgb(230,230,230)'}}>
+                                <Text>H</Text>
+                            </ListItem>  
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Health Care Administration</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Help Desk</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Hospitality Management</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
+                            <ListItem itemDivider style = {{backgroundColor: 'rgb(230,230,230)'}}>
+                                <Text>I</Text>
+                            </ListItem>  
+                            <ListItem>
+                                <Body style={{ justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 16, fontWeight: '500', color: 'rgb(50,50,50)' }}>Impromptu Speaking</Text>
+                                </Body>
+                                <Right>
+                                    <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                                        <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                                    </View>
+                                </Right>
+                            </ListItem>
                         </List>
         </View>
         </ScrollView>
