@@ -271,7 +271,7 @@ export default class AuthSignUp extends React.Component {
                     </View> 
 
                     <View style={{
-                        marginBottom: 30,
+                        marginBottom: 70,
                         width: SCREEN_WIDTH - 55,
                         height: 55,
                         borderRadius: 5,
@@ -283,18 +283,31 @@ export default class AuthSignUp extends React.Component {
                             fontWeight: '600'
                         }}>   CHAPTER NAME
                         </Text>
+                        <Text style={{
+                            fontSize: 13,
+                            marginTop: 5,
+                            marginHorizontal: 9,
+                            color: 'rgb(150,150,150)',
+                            fontWeight: '400',
+                            textAlign: 'left'
+                        }}>   
+                        
+                        <Text>   Ensure that you are copying the chapter name </Text>
+                        {"\n"}
+                        <Text>   EXACTLY as named by your advisor.</Text>
+                        </Text>
 
 
-                        <FormInput
+                        <FormInput 
                             style={{
                                 fontSize: 16,
                                 marginHorizontal: 10,
                                 marginTop: 5,
                                 color: 'gray'
                             }}
-                            placeholder={''}
-                            placeholderTextColor={'gray'}
-
+                            placeholder = {''}
+                            placeholderTextColor = {'gray'}   
+                                                                         
                         />
                         <FormValidationMessage></FormValidationMessage>
                     </View>

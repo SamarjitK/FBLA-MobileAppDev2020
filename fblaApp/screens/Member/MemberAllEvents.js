@@ -68,6 +68,18 @@ export default class MemberAllEvents extends React.Component {
                 </Card>
         </View>
                 */}
+        <View style={{
+            alignItems: "center",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            paddingVertical: 10,
+            paddingHorizontal: 20,
+            marginVertical: 5,
+            
+        }}>
+            <Text style = {{fontSize: 18,textAlign: 'left', fontWeight: '400', color: 'rgb(105,105,105)'}}>Available Events: <Text style = {{color: 'rgb(50,50,50)', fontWeight: '600'}}>71</Text></Text>
+
+        </View>
         <View style = {{backgroundColor: 'white'}}>
         <List>
                             <ListItem itemDivider style = {{backgroundColor: 'rgb(230,230,230)'}}>

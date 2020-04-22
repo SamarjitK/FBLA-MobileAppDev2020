@@ -36,11 +36,7 @@ export default class MemberEvents extends React.Component {
                     marginTop: 35
                 }}>EVENTS</Text>
               }
-            rightComponent = {
-                <Button transparent style = {{ marginTop: 35, justifyContent: 'flex-start', alignItems: 'center', marginRight: 10}} onPress={() => this.props.navigation.navigate('MemberAllEvents')}>
-                    <Icon style = {{height:30, width:30}} name = 'ios-add-circle-outline' type='ionicon' size = {26} color='white' />
-                </Button>
-            }
+            
         />
         
         <ScrollView
@@ -49,9 +45,10 @@ export default class MemberEvents extends React.Component {
         <View style = {{
             justifyContent: 'center',
             alignItems: 'center',
-        }}>    
             
-                <Card style={{ width: SCREEN_WIDTH - 20, alignItems: 'flex-start', }}>
+        }}>    
+               
+                <Card style={{ width: SCREEN_WIDTH - 20,  alignItems: 'flex-start', }}>
                     <CardItem header bordered style = {{justifyContent: 'center'}}>
                     <Body>
                     <Text style={{
@@ -63,16 +60,7 @@ export default class MemberEvents extends React.Component {
                             width:500,
                     }}>YOUR COMPETITIVE EVENTS</Text>
                     </Body>
-                        <Right style = {{}}>
-                            
-                            <TouchableOpacity style={{ justifyContent: 'flex-end', marginRight: 5, alignItems: 'flex-end'}} >
-                            <Icon name='edit' size = {24} type='fontawesome' color='rgb(150,150,150)' />
-                            </TouchableOpacity>
-                            
-                            
-                            
-                            
-                        </Right>    
+
                     </CardItem>
 
                     {/*First event*/}
@@ -168,18 +156,46 @@ export default class MemberEvents extends React.Component {
                             width:500,
                     }}>YOUR CURRENT EVENTS</Text>
                     </Body>
-                        <Right style = {{}}>
-                            
-                            <TouchableOpacity style={{ justifyContent: 'flex-end', marginRight: 5, alignItems: 'flex-end'}} >
-                            <Icon name='edit' size = {24} type='fontawesome' color='rgb(150,150,150)' />
-                            </TouchableOpacity>
-                            
-                            
-                            
-                            
-                        </Right>    
+                        
                     </CardItem>
+                    <CardItem >     
+                        <Body>
+                            <Text style = {{fontWeight:'600', fontSize: 19, color: 'rgb(75,75,75)', marginVertical: 4 }}>Lunch Bake Sale</Text>
+                            <Text style = {{fontWeight:'600', fontSize: 15,  color: 'rgb(75,75,75)' }}>April 22nd, 2020  </Text>
+                            <Row style = {{alignItems: 'center', width: 500, marginTop: 5}}>
+                                <Text style = {{fontWeight:'600', fontSize: 15, color: 'rgb(125,125,125)' }}>Fundraiser  </Text>
+                                <Icon name='circle' type='font-awesome' size = {5} color='rgb(150,150,150)' /> 
+                                <Text style = {{fontSize: 15, fontWeight: '600', color: 'rgb(125,125,125)'}}>  Cafeteria</Text>
+                            </Row>
 
+
+                        </Body>
+                                                        
+                    </CardItem>
+                    <CardItem style = {{justifyContent: 'center', alignItems: 'flex-start'}}>        
+                            <Text style = {{fontSize: 16}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </Text>
+                        
+                    </CardItem>
+                    {/*
+                    <CardItem style={{ alignItems: 'center' }}>
+                        <Body >
+                          <Text style={{ fontSize: 15, marginVertical: 5, alignSelf: 'center', fontWeight: '400', color: 'rgb(100,100,100)' }}>
+                            You have no current events
+                          </Text>
+                        </Body>
+                        
+                    </CardItem>
+                    */}
+                    <CardItem footer bordered button onPress={() => this.props.navigation.navigate('MemberCurrentEvents')}>
+                      <Body style={{ justifyContent: 'center', alignItems: 'flex-start' }}>
+                        <Text style={{ fontSize: 17, width: 500, fontWeight: '600', color: 'rgb(75,75,75)'}}>View All Current Events</Text>
+                      </Body>
+                      <Right>
+                        <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end'}} >
+                          <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                        </View>
+                      </Right>
+                    </CardItem>
                     
                 </Card>
                 

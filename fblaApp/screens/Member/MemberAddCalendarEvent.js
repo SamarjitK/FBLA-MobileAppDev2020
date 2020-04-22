@@ -51,7 +51,7 @@ export default class MemberAddCalendarEvent extends React.Component {
         </Header>
         
         <KeyboardAwareScrollView
-              scrollEnabled = {false}
+              scrollEnabled = {true}
               extraHeight = {175}
             >
         

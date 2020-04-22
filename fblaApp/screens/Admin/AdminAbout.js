@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Dimensions, Text, ScrollView, Linking } from 'react-native'
+import { View, Dimensions, Text, ScrollView, Linking, TouchableOpacity, Image } from 'react-native'
 import { Header, Icon } from 'react-native-elements';
 import {Button, Card, CardItem, Body, Right} from 'native-base';
 import TabBarIcon from '../../components/TabBarIcon';
@@ -11,6 +11,9 @@ const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 export default class AdminAbout extends React.Component {
 
+  
+
+
 
   render() {
     return (
@@ -18,7 +21,7 @@ export default class AdminAbout extends React.Component {
         flex:1,
         width:SCREEN_WIDTH,
         height:SCREEN_HEIGHT,
-        backgroundColor: 'rgb(255,255,255)',
+        backgroundColor: 'rgb(245,245,245)',
     }}>
         <Header
             outerContainerStyles={styles.memberHeader}
@@ -34,7 +37,7 @@ export default class AdminAbout extends React.Component {
                   fontSize: 20,
                   fontWeight: '600',
                   marginTop: 35
-              }}>Admin ABOUT</Text>
+              }}>ADMIN ABOUT</Text>
             }
         >
         </Header>
@@ -87,7 +90,7 @@ export default class AdminAbout extends React.Component {
                         />
                       </Button>
                     </CardItem>
-                    <CardItem footer bordered button onPress={() => this.props.navigation.navigate('MemberAboutFBLA')}>
+                    <CardItem footer bordered button>
                       <Body style={{ justifyContent: 'center' }}>
                         <Text style={{ fontSize: 17, fontWeight: '600', color: 'rgb(50,50,50)' }}>Learn More</Text>
                       </Body>
@@ -97,7 +100,7 @@ export default class AdminAbout extends React.Component {
                         </View>
                       </Right>
                     </CardItem>
-                    <CardItem footer bordered button onPress={() => this.props.navigation.navigate('MemberOfficers')}>
+                    <CardItem footer bordered button>
                       <Body style={{ justifyContent: 'center' }}>
                         <Text style={{ fontSize: 17, fontWeight: '600', color: 'rgb(50,50,50)' }}>National Officers</Text>
                       </Body>
@@ -118,28 +121,19 @@ export default class AdminAbout extends React.Component {
                             width:'100%',
                     }}>ABOUT THIS CHAPTER</Text>
                     </CardItem>
-                    <CardItem style={{ alignItems: 'center' }}>
-                        <Text style={{ fontSize: 15, fontWeight: '400', color: 'black' }}>
-                          idek if we need this tbh - we can make this editable by admin
-                        </Text>
+                    <CardItem footer bordered button onPress={() => this.props.navigation.navigate('AdminChapterOfficers')}>
+                      <Body style={{ justifyContent: 'center',  }}>
+                        <Text style={{ fontSize: 17, width: 500, fontWeight: '600', color: 'rgb(50,50,50)' }}>Manage Chapter Officers</Text>
+                      </Body>
+                      <Right>
+                        <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                          <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                        </View>
+                      </Right>
                     </CardItem>
                 </Card>
-                <Card style={{ width: SCREEN_WIDTH - 20, alignItems: 'flex-start'}}>
-                    <CardItem header bordered>
-                        <Text style={{
-                            color: 'black',
-                            fontSize: 20,
-                            fontWeight: '600',
-                            textAlign: 'left',
-                            width:'100%',
-                    }}>CHAPTER OFFICER TEAM</Text>
-                    </CardItem>
-                    <CardItem style={{ alignItems: 'center' }}>
-                        <Text style={{ fontSize: 17, fontWeight: '400', color: 'black' }}>
-                          Will add stuff here
-                        </Text>
-                    </CardItem>
-                </Card>
+                
+                
         </View>
         </ScrollView>
     </View>

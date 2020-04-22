@@ -17,16 +17,12 @@ export default class MemberHome extends React.Component {
         flex:1,
         width:SCREEN_WIDTH,
         height:SCREEN_HEIGHT,
-        backgroundColor: 'rgb(255,255,255)',
+        backgroundColor: 'rgb(245,245,245)',
     }}>
         <Header
             outerContainerStyles={styles.memberHeader}
             innerContainerStyles = {{alignItems: 'center'}}
-            leftComponent ={
-                <Button transparent style = {{ justifyContent: 'flex-start', alignItems: 'center', width:55, marginLeft: 10, marginTop: 40}} onPress={() => this.props.navigation.navigate('MemberChangeProfile')}>
-                    <Icon style = {{height:30, width:30}} name = 'ios-contact' type='ionicon' size = {30} color='white' />
-                </Button>
-            } 
+            
             centerComponent = {
                 <Text style={{
                     color: 'white',
@@ -37,7 +33,7 @@ export default class MemberHome extends React.Component {
                     justifyContent: 'center',
                     fontSize: 20,
                     fontWeight: '600',
-                    marginLeft: -40,
+                    
                     marginTop: 35
                 }}>HOME</Text>
               }
@@ -79,26 +75,7 @@ export default class MemberHome extends React.Component {
                     </CardItem>
                 </Card>
 
-                <Card style={{ width: SCREEN_WIDTH - 20, alignItems: 'flex-start'}}>
-                    <CardItem header bordered>
-                        <Text style={{
-                            color: 'black',
-                            fontSize: 17,
-                            fontWeight: '600',
-                            textAlign: 'left',
-                            width:'100%',
-                    }}>UPCOMING EVENTS</Text>
-                    </CardItem>
-                    
-                    <CardItem style={{ alignItems: 'center' }}>
-                        <Body >
-                          <Text style={{ fontSize: 15, marginVertical: 5, alignSelf: 'center', fontWeight: '400', color: 'rgb(100,100,100)' }}>
-                            There are no upcoming events
-                          </Text>
-                        </Body>
-                        
-                    </CardItem>
-                </Card>
+                
         </View>
         </ScrollView>
     </View>

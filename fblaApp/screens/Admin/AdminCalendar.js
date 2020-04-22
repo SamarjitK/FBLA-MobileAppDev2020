@@ -17,7 +17,7 @@ export default class MemberCalendar extends React.Component {
         flex:1,
         width:SCREEN_WIDTH,
         height:SCREEN_HEIGHT,
-        backgroundColor: 'rgb(255,255,255)',
+        backgroundColor: 'rgb(245,245,245)',
     }}>
         <Header
             outerContainerStyles={styles.memberHeader}

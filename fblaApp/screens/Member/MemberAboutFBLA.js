@@ -15,13 +15,13 @@ export default class MemberAboutFBLA extends React.Component {
         flex:1,
         width:SCREEN_WIDTH,
         height:SCREEN_HEIGHT,
-        backgroundColor: 'rgb(255,255,255)',
+        backgroundColor: 'rgb(245,245,245)',
     }}>
         <Header
             outerContainerStyles={styles.memberHeader}
             innerContainerStyles = {{alignItems: 'center'}}
             leftComponent ={
-                <Button transparent style = {{ justifyContent: 'flex-start', alignItems: 'center', width:55, marginLeft: 10, marginTop: 40}} onPress={() => this.props.navigation.navigate('MemberAbout')}>
+                <Button transparent style = {{ justifyContent: 'flex-start', alignItems: 'center', width:55, marginLeft: 10, marginTop: 40}} onPress={() => this.props.navigation.goBack()}>
                     <Icon style = {{height:30, width:30}} name = 'ios-arrow-back' type='ionicon' color='white' />
                 </Button>
             } 
@@ -42,7 +42,7 @@ export default class MemberAboutFBLA extends React.Component {
         >
         </Header>
         <ScrollView
-            showsVerticalScrollIndicator = {true}
+            showsVerticalScrollIndicator = {false}
         >
         <View style = {{
             justifyContent: 'center',
@@ -95,7 +95,18 @@ export default class MemberAboutFBLA extends React.Component {
                 }}>GOALS                                                                                  </Text>
                 </CardItem>
                 <CardItem style={{ alignItems: 'center' }}>
-                    <Text style={{ fontSize: 20, fontWeight: '600', color: 'rgb(75,75,75)' }}>Will add stuff here</Text>
+                <Text style={{ fontSize: 15, fontWeight: '400', color: 'rgb(75,75,75)' }}>
+                    Develop competent, aggressive business leadership.
+                    {"\n"}Strengthen the confidence of students in themselves and their work.
+                    {"\n"}Create more interest in and understanding of American business enterprise.
+                    {"\n"}Encourage members in the development of individual projects that contribute to the improvement of home, business, and community.
+                    {"\n"}Develop character, prepare for useful citizenship, and foster patriotism.
+                    {"\n"}Encourage and practice efficient money management.
+                    {"\n"}Encourage scholarship and promote school loyalty.
+                    {"\n"}Assist students in the establishment of occupational goals.
+                    {"\n"}Facilitate the transition from school to work.
+
+                    </Text>
                 </CardItem>
             </Card>
             <Card style={{ width: SCREEN_WIDTH - 20, alignItems: 'flex-start'}}>
@@ -108,7 +119,25 @@ export default class MemberAboutFBLA extends React.Component {
                 }}>CONFERENCES                                                                                  </Text>
                 </CardItem>
                 <CardItem style={{ alignItems: 'center' }}>
-                    <Text style={{ fontSize: 20, fontWeight: '600', color: 'rgb(75,75,75)' }}>Will add stuff here</Text>
+                <Text style={{ fontSize: 15, fontWeight: '400', color: 'rgb(75,75,75)' }}>
+                FBLA-PBL organizes conferences for members and advisers. These programs are designed to help members develop their business leadership, networking, career development, and social skills.
+
+                {"\n"}{"\n"}<Text style={{ fontSize: 15, fontWeight: '600', color: 'rgb(50,50,50)' }}>National Leadership Conference (NLC)</Text>
+                {"\n"}Packed with workshops and exhibits, the four-day National Leadership Conference is considered the pinnacle of the FBLA and PBL experience. FBLA-PBL has forged partnerships with industry leaders to underwrite competitive events and scholarships for students that achieve national ranking.
+
+                {"\n"}{"\n"}<Text style={{ fontSize: 15, fontWeight: '600', color: 'rgb(50,50,50)' }}>Institute for Leaders (IFL)</Text>
+                {"\n"}Held in conjunction with the National Leadership Conference, the Institute for Leaders is a high-energy, intensive, two-day seminar focuses on leadership development that gives young adults an edge in the career marketplace.
+
+                {"\n"}{"\n"}<Text style={{ fontSize: 15, fontWeight: '600', color: 'rgb(50,50,50)' }}>PBL Career Connections Conference</Text>
+                {"\n"}October 24-26
+                {"\n"}New York City
+                {"\n"}New York Marriott East Side
+
+                {"\n"}{"\n"}<Text style={{ fontSize: 15, fontWeight: '600', color: 'rgb(50,50,50)' }}>FBLA National Fall Leadership Conference (NFLC)</Text>
+                {"\n"}Each fall, new leaders and advisers from chapters across the nation gather for FBLA National Fall Leadership Conferences designed to foster leadership skills and team-building. The conferences include workshops, seminars, exhibits, and general sessions, as well as ample networking and social events.
+
+                    </Text>
+                
                 </CardItem>
             </Card>
             <Card style={{ width: SCREEN_WIDTH - 20, alignItems: 'flex-start'}}>
@@ -121,22 +150,12 @@ export default class MemberAboutFBLA extends React.Component {
                 }}>FUNDING & ENDORSEMENTS                                                                                  </Text>
                 </CardItem>
                 <CardItem style={{ alignItems: 'center' }}>
-                    <Text style={{ fontSize: 20, fontWeight: '600', color: 'rgb(75,75,75)' }}>Will add stuff here</Text>
+                    <Text style={{ fontSize: 15, fontWeight: '400', color: 'rgb(75,75,75)' }}>
+                    FBLA-PBL is funded by membership dues, conference fees, corporate contributions, and grants. FBLA-PBL is recognized by the Association for Career and Technical Education, International Assembly for Collegiate Business Education, National Association of Parliamentarians, National Association of Secondary School Principals, National Business Education Association, and the U.S. Department of Education.
+                    </Text>
                 </CardItem>
             </Card>
-            <Card style={{ width: SCREEN_WIDTH - 20, alignItems: 'flex-start'}}>
-                <CardItem header bordered>
-                    <Text style={{
-                        color: 'black',
-                        fontSize: 13,
-                        fontWeight: '400',
-                        textAlign: 'left'
-                }}>SOCIAL MEDIA                                                                                  </Text>
-                </CardItem>
-                <CardItem style={{ alignItems: 'center' }}>
-                    <Text style={{ fontSize: 20, fontWeight: '600', color: 'rgb(75,75,75)' }}>Will add stuff here</Text>
-                </CardItem>
-            </Card>
+            
             
         </View>
         </ScrollView>

@@ -117,8 +117,8 @@ export default class MemberAddCompEvent extends React.Component {
             </Item>
           </CardItem>
           <CardItem bordered style = {{marginTop: 12, flexDirection: 'column', alignItems: 'flex-start'}}>
-            <Text style = {{fontSize:16, fontWeight: '500', color: 'rgb(80,80,80)'}}>Step 3 - Notify Team Members</Text>
-            <Text style = {{fontSize: 14, marginTop: 5, marginBottom: 10, textAlign: 'left', color: 'rgb(105,105,105)'}}>If you are working individually, you may ignore this. However, if you are working in a team, and your team members do not complete this form, you will be unable to compete in this event. Make sure to notify your team members to fill out this form. </Text>
+            <Text style = {{fontSize:16, fontWeight: '500', color: 'rgb(80,80,80)'}}>Step 3 - Check Information</Text>
+            <Text style = {{fontSize: 14, marginTop: 5, marginBottom: 10, textAlign: 'left', color: 'rgb(105,105,105)'}}>If you are working individually, you may ignore this. However, if you are working in a team, make sure that your team members' names are spelled properly. Ensure that ONLY ONE team member fills out this form.</Text>
 
           </CardItem>
           <CardItem bordered style = {{marginTop: 12, flexDirection: 'column', alignItems: 'flex-start'}}>

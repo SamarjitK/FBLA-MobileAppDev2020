@@ -328,7 +328,7 @@ export default class AuthSignUpAdmin extends React.Component {
                         
                         <Text>   Must include a symbol or number and have at</Text>
                         {"\n"}
-                        <Text>   least 8 characters</Text>
+                        <Text>   least 6 characters</Text>
                         </Text>
 
                         <FormInput

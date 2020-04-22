@@ -25,7 +25,7 @@ export default class MemberSettings extends React.Component {
         flex:1,
         width:SCREEN_WIDTH,
         height:SCREEN_HEIGHT,
-        backgroundColor: 'rgb(255,255,255)',
+        backgroundColor: 'rgb(245,245,245)',
     }}>
         <Header
             outerContainerStyles={styles.memberHeader}
@@ -44,7 +44,14 @@ export default class MemberSettings extends React.Component {
               }}>ADMIN SETTINGS</Text>
             }
         />
+          <Card>
+          <CardItem style = {{ justifyContent: 'center', alignItems: 'center',flexDirection: 'column'}}>
+            <Text style = {{fontSize: 22, fontWeight:'600', color: 'rgb(50,50,50)', marginTop: 5}}>Tesla STEM High School</Text>
+            <Text style = {{fontSize: 18, marginVertical: 5,fontWeight:'600', color: 'rgb(105,105,105)'}}>FBLA Chapter Admin Account</Text>  
 
+              
+            </CardItem>
+          </Card>
           <Card>
           <CardItem bordered button onPress={() => this.props.navigation.navigate('SettingsQandA')} >
               <Body style = {{ justifyContent: 'center'}}>
@@ -86,6 +93,16 @@ export default class MemberSettings extends React.Component {
               </View>
               </Right>
             </CardItem>
+            <CardItem bordered button onPress={() => this.props.navigation.navigate('MemberHome')} >
+              <Body style = {{ justifyContent: 'center'}}>
+                <Text style = {{fontSize: 15, fontWeight:'600', color: 'rgb(50,50,50)'}}>View User Profile</Text>
+              </Body>
+              <Right>
+              <View style = {{ justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+                <Icon name = 'ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+              </View>
+              </Right>
+            </CardItem>
 
           </Card>
           <View style = {{
@@ -97,7 +114,7 @@ export default class MemberSettings extends React.Component {
                 <View style = {{
                   width: SCREEN_WIDTH - 120,
                   height: 40,
-                  backgroundColor:'rgb(255,255,255)',
+                  backgroundColor:'rgb(245,245,245)',
                   borderColor: 'rgb(191,47,56)',
                   borderRadius:10,
                   borderWidth: 1,

@@ -23,9 +23,19 @@ const SCREEN_HEIGHT = Dimensions.get('window').height;
     officersName:{
       color: 'rgb(80,80,80)',
       fontSize: 15,
-      fontWeight: '600' 
+      fontWeight: '600',
+      alignSelf: 'center',
+      textAlign: 'center',
+      marginBottom: 5
     },
     officersPosition:{
+      color: 'rgb(150,150,150)',
+      fontSize: 15,                    
+      fontWeight: '400',
+      textAlign: 'center',
+      marginBottom: 5
+    },
+    officersEmail:{
       color: 'rgb(170,170,170)',
       fontSize: 13,                    
       fontWeight: '400',

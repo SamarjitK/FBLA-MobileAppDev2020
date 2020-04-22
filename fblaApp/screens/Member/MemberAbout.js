@@ -18,7 +18,7 @@ export default class MemberAbout extends React.Component {
         flex:1,
         width:SCREEN_WIDTH,
         height:SCREEN_HEIGHT,
-        backgroundColor: 'rgb(255,255,255)',
+        backgroundColor: 'rgb(245,245,245)',
     }}>
         <Header
             outerContainerStyles={styles.memberHeader}
@@ -39,7 +39,7 @@ export default class MemberAbout extends React.Component {
         >
         </Header>
         <ScrollView
-            showsVerticalScrollIndicator = {true}
+            showsVerticalScrollIndicator = {false}
         >
         <View style = {{
             justifyContent: 'center',
@@ -118,26 +118,15 @@ export default class MemberAbout extends React.Component {
                             width:'100%',
                     }}>ABOUT THIS CHAPTER</Text>
                     </CardItem>
-                    <CardItem style={{ alignItems: 'center' }}>
-                        <Text style={{ fontSize: 15, fontWeight: '400', color: 'black' }}>
-                          idek if we need this tbh - we can make this editable by admin
-                        </Text>
-                    </CardItem>
-                </Card>
-                <Card style={{ width: SCREEN_WIDTH - 20, alignItems: 'flex-start'}}>
-                    <CardItem header bordered>
-                        <Text style={{
-                            color: 'black',
-                            fontSize: 20,
-                            fontWeight: '600',
-                            textAlign: 'left',
-                            width:'100%',
-                    }}>CHAPTER OFFICER TEAM</Text>
-                    </CardItem>
-                    <CardItem style={{ alignItems: 'center' }}>
-                        <Text style={{ fontSize: 17, fontWeight: '400', color: 'black' }}>
-                          Will add stuff here
-                        </Text>
+                    <CardItem footer bordered button onPress={() => this.props.navigation.navigate('MemberChapterOfficers')}>
+                      <Body style={{ justifyContent: 'center',  }}>
+                        <Text style={{ fontSize: 17, width: 500, fontWeight: '600', color: 'rgb(50,50,50)' }}>Your Chapter Officers</Text>
+                      </Body>
+                      <Right>
+                        <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                          <Icon name='ios-arrow-forward' type='ionicon' color='rgb(200,200,200)' />
+                        </View>
+                      </Right>
                     </CardItem>
                 </Card>
         </View>

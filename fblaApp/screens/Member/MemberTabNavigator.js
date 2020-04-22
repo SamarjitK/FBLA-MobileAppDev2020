@@ -5,11 +5,13 @@ import { createStackNavigator } from 'react-navigation-stack'
 import TabBarIcon from '../../components/TabBarIcon';
 import MemberHome from './MemberHome.js';
 import MemberEvents from './MemberEvents.js';
+import MemberAddCurrentEvent from './MemberAddCurrentEvent.js';
 import MemberAllEvents from './MemberAllEvents.js';
 import MemberEventDetails from './MemberEventDetails.js';
 import MemberEventDVP from './MemberEventDVP.js';
 import MemberAddCompEvent from './MemberAddCompEvent.js';
 import MemberMyEventDetails from './MemberMyEventDetails.js';
+import MemberCurrentEvents from './MemberCurrentEvents.js';
 import MemberAbout from './MemberAbout.js';
 import MemberCalendar from './MemberCalendar.js';
 import MemberAddCalendarEvent from './MemberAddCalendarEvent.js'
@@ -17,6 +19,7 @@ import MemberSettings from './MemberSettings.js';
 import MemberChangeProfile from './MemberChangeProfile.js';
 import MemberAboutFBLA from './MemberAboutFBLA.js'
 import MemberOfficers from './MemberOfficers'
+import MemberChapterOfficers from './MemberChapterOfficers'
 import SettingsQandA from './SettingsQandA';
 
 const BottomTransition = (index, position, height) => {
@@ -44,7 +47,7 @@ const NavigationConfig = () => {
 }
 const HomeStack = createStackNavigator({
     MemberHome: { screen: MemberHome },
-    MemberChangeProfile: {screen: MemberChangeProfile}
+    
   },
   {
     headerMode: 'none',
@@ -76,7 +79,8 @@ const EventsStack = createStackNavigator({
     MemberEventDVP: {screen: MemberEventDVP},
     MemberEventDetails: {screen: MemberEventDetails},
     MemberAddCompEvent: {screen: MemberAddCompEvent},
-    
+    MemberCurrentEvents: {screen: MemberCurrentEvents},
+    MemberAddCurrentEvent: {screen: MemberAddCurrentEvent}
   },
   {
     headerMode: 'none',
@@ -129,7 +133,8 @@ CalendarStack.navigationOptions = {
 const AboutStack = createStackNavigator({
     MemberAbout: { screen: MemberAbout },
     MemberAboutFBLA: {screen: MemberAboutFBLA},
-    MemberOfficers: {screen: MemberOfficers}
+    MemberOfficers: {screen: MemberOfficers},
+    MemberChapterOfficers: {screen: MemberChapterOfficers}
 },
 {
   headerMode: 'none',
@@ -155,7 +160,8 @@ AboutStack.navigationOptions = {
 
 const SettingsStack = createStackNavigator({
   MemberSettings: { screen: MemberSettings },
-  SettingsQandA: {screen: SettingsQandA}
+  SettingsQandA: {screen: SettingsQandA},
+  MemberChangeProfile: {screen: MemberChangeProfile}
 },
 {
   headerMode: 'none',

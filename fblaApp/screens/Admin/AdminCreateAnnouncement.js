@@ -8,11 +8,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
-const dataArray = [
-    { title: "First Element", content: "Lorem ipsum dolor sit amet" },
-    { title: "Second Element", content: "Lorem ipsum dolor sit amet" },
-    { title: "Third Element", content: "Lorem ipsum dolor sit amet" }
-  ];
+
 
 export default class AdminCreateAnnouncement extends React.Component {
 
@@ -51,41 +47,102 @@ export default class AdminCreateAnnouncement extends React.Component {
         </Header>
         
         <KeyboardAwareScrollView
-              scrollEnabled = {false}
+              
               extraHeight = {175}
+              showsVerticalScrollIndicator = {false}
             >
         
-        <View style = {{
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-        }}>    
-        <View style = {{backgroundColor: 'white', width: SCREEN_WIDTH, marginTop: 20}}>
-            <Item>
-            </Item>
-            <Item style = {{marginLeft: 15}}>
-                <Input placeholder="Title" placeholderTextColor = 'rgb(200,200,200)' />
-            </Item>
-            <Item >
-                <Input style = {{marginLeft: 15}} placeholder="Location" placeholderTextColor = 'rgb(200,200,200)'/>
-            </Item>
-        </View>
-        <View style = {{backgroundColor: 'white', width: SCREEN_WIDTH, marginTop: 40}}>
-            <Item>
-            </Item>
-            <Item style = {{marginLeft: 15}}>
-                <Input placeholder="Starts"  />
-            </Item>
-            <Item >
-                <Input style = {{marginLeft: 15}} placeholder="Ends"/>
-            </Item>
-        </View>
-        </View>
+        <Card>
+          
+          
+          <CardItem style = {{marginTop: 12}}>
+            <Text style = {{fontSize:16, fontWeight: '500', color: 'rgb(80,80,80)'}}>Step 1 - Select Recipients</Text>
+          </CardItem>
 
-        <View style = {{backgroundColor: 'white', width: SCREEN_WIDTH,  marginTop: 20}}>
+          <CardItem bordered style = {{}}>
+            <Body style = {{marginLeft: 10}}>
+            <View style = {{flexDirection: 'row', marginVertical: 10}}>
+            <TouchableOpacity style={{ marginRight: 15, alignItems: "center", justifyContent: "center" }}>
+                <Icon type='record' name={'radio-button-unchecked'} color={'' ? "#808080" : "#000"} size={25} />
+            </TouchableOpacity>
+            <Text style = {{fontSize: 18,textAlign: 'left', color: 'rgb(50,50,50)'}}>9th Grade Members</Text>
+            </View>
+
+            <View style = {{flexDirection: 'row', marginVertical: 10}}>
+            <TouchableOpacity style={{ marginRight: 15, alignItems: "center", justifyContent: "center" }}>
+                <Icon type='record' name={'radio-button-unchecked'} color={'' ? "#808080" : "#000"} size={25} />
+            </TouchableOpacity>
+            <Text style = {{fontSize: 18,textAlign: 'left', color: 'rgb(50,50,50)'}}>10th Grade Members</Text>
+            </View>
+
+            <View style = {{flexDirection: 'row', marginVertical: 10}}>
+            <TouchableOpacity style={{ marginRight: 15, alignItems: "center", justifyContent: "center" }}>
+                <Icon type='record' name={'radio-button-unchecked'} color={'' ? "#808080" : "#000"} size={25} />
+            </TouchableOpacity>
+            <Text style = {{fontSize: 18,textAlign: 'left', color: 'rgb(50,50,50)'}}>11th Grade Members</Text>
+            </View>
+
+            <View style = {{flexDirection: 'row', marginVertical: 10}}>
+            <TouchableOpacity style={{ marginRight: 15, alignItems: "center", justifyContent: "center" }}>
+                <Icon type='record' name={'radio-button-unchecked'} color={'' ? "#808080" : "#000"} size={25} />
+            </TouchableOpacity>
+            <Text style = {{fontSize: 18,textAlign: 'left', color: 'rgb(50,50,50)'}}>12th Grade Members</Text>
+            </View>
+
+            <View style = {{flexDirection: 'row', marginVertical: 10}}>
+            <TouchableOpacity style={{ marginRight: 15, alignItems: "center", justifyContent: "center" }}>
+                <Icon type='record' name={'radio-button-unchecked'} color={'' ? "#808080" : "#000"} size={25} />
+            </TouchableOpacity>
+            <Text style = {{fontSize: 18,textAlign: 'left', color: 'rgb(50,50,50)'}}>Chapter Officers</Text>
+            </View>
+
+            <View style = {{flexDirection: 'row', marginVertical: 10}}>
+            <TouchableOpacity style={{ marginRight: 15, alignItems: "center", justifyContent: "center" }}>
+                <Icon type='record' name={'radio-button-unchecked'} color={'' ? "#808080" : "#000"} size={25} />
+            </TouchableOpacity>
+            <Text style = {{fontSize: 18,textAlign: 'left', color: 'rgb(50,50,50)'}}>All Members</Text>
+            </View>
             
-                <Textarea style = {{marginLeft: 13, marginTop: 8}} rowSpan={5} placeholder="Notes..." fontSize = {18} placeholderTextColor = "rgb(200,200,200)" />
-        </View>
+            </Body>
+          </CardItem>
 
+          <CardItem style = {{marginTop: 12, flexDirection: 'column', alignItems: 'flex-start'}}>
+            <Text style = {{fontSize:16, fontWeight: '500', color: 'rgb(80,80,80)'}}>Step 2 - Select Announcement Urgency</Text>
+          </CardItem>
+
+          <CardItem bordered style = {{}}>
+            <Body style = {{marginLeft: 10}}>
+            <View style = {{flexDirection: 'row', marginVertical: 10}}>
+            <TouchableOpacity style={{ marginRight: 15, alignItems: "center", justifyContent: "center" }}>
+                <Icon type='record' name={'radio-button-unchecked'} color={'' ? "#808080" : "#000"} size={25} />
+            </TouchableOpacity>
+            <Text style = {{fontSize: 18,textAlign: 'left', color: 'rgb(50,50,50)'}}>FYI <Text style = {{color: 'rgb(150,150,150)'}}>(Green)</Text></Text>
+            </View>
+            <View style = {{flexDirection: 'row', marginVertical: 10}}>
+            <TouchableOpacity style={{ marginRight: 15, alignItems: "center", justifyContent: "center" }}>
+                <Icon type='record' name={'radio-button-unchecked'} color={'' ? "#808080" : "#000"} size={25} />
+            </TouchableOpacity>
+            <Text style = {{fontSize: 18,textAlign: 'left', color: 'rgb(50,50,50)'}}>Important <Text style = {{color: 'rgb(150,150,150)'}}>(Yellow)</Text></Text>
+            </View>
+
+            <View style = {{flexDirection: 'row', marginVertical: 10}}>
+            <TouchableOpacity style={{ marginRight: 15, alignItems: "center", justifyContent: "center" }}>
+                <Icon type='record' name={'radio-button-unchecked'} color={'' ? "#808080" : "#000"} size={25} />
+            </TouchableOpacity>
+            <Text style = {{fontSize: 18,textAlign: 'left', color: 'rgb(50,50,50)'}}>Immediate Action Required <Text style = {{color: 'rgb(150,150,150)'}}>(Red)</Text></Text>
+            </View>
+            
+            </Body>
+          </CardItem>
+
+          <CardItem bordered style = {{marginTop: 12, flexDirection: 'column', alignItems: 'flex-start'}}>
+            <Text style = {{fontSize:16, marginBottom: 12, fontWeight: '500', color: 'rgb(80,80,80)'}}>Step 3 - Write Announcement</Text>
+
+          </CardItem>
+          <Textarea bordered style = {{borderTopColor: 'white', borderLeftColor: 'white', borderRightColor: 'white',borderBottomColor: 'rgb(225,225,225)', marginTop: 8}} rowSpan={8} placeholder="Write announcement here..." fontSize = {18} placeholderTextColor = "rgb(200,200,200)" />
+
+          
+        </Card>
         <View style = {{alignItems: 'center', marginTop: 20}}>
         <TouchableOpacity>
                 <View style = {{

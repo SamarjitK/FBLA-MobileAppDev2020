@@ -5,11 +5,23 @@ import { createStackNavigator } from 'react-navigation-stack'
 import TabBarIcon from '../../components/TabBarIcon';
 import AdminHome from './AdminHome.js';
 import AdminEvents from './AdminEvents.js';
+import AdminAllEvents from './AdminAllEvents.js';
+import AdminEventDetails from './AdminEventDetails.js';
+import AdminAddCurrentEvent from './AdminAddCurrentEvent.js';
 import AdminAbout from './AdminAbout.js';
 import AdminCalendar from './AdminCalendar.js';
 import AdminSettings from './AdminSettings.js';
 import AdminCreateAnnouncement from './AdminCreateAnnouncement.js';
-
+import AdminEditAnnouncement from './AdminEditAnnouncement.js';
+import AdminEditAttendance from './AdminEditAttendance.js';
+import AdminCurrentEvents from './AdminCurrentEvents.js'
+import AdminAttendance from './AdminAttendance.js'
+import AdminWeeklyMeetings from './AdminWeeklyMeetings.js'
+import AdminAddMeeting from './AdminAddMeeting.js'
+import AdminEventTeams from './AdminEventTeams.js'
+import AdminChapterOfficers from './AdminChapterOfficers.js'
+import AdminAddChapterOfficer from './AdminAddChapterOfficer.js'
+import AdminCurrentEventSignups from './AdminCurrentEventSignups.js'
 
 const BottomTransition = (index, position, height) => {
   const sceneRange = [index - 1, index];
@@ -37,6 +49,7 @@ const NavigationConfig = () => {
 const HomeStack = createStackNavigator({
     AdminHome: { screen: AdminHome },
     AdminCreateAnnouncement: {screen: AdminCreateAnnouncement},
+    AdminEditAnnouncement: {screen: AdminEditAnnouncement}
   },
   {
     headerMode: 'none',
@@ -63,7 +76,18 @@ const HomeStack = createStackNavigator({
 
 const EventsStack = createStackNavigator({
     AdminEvents: { screen: AdminEvents },
-   
+    AdminAllEvents: {screen: AdminAllEvents},
+    AdminAddCurrentEvent: {screen: AdminAddCurrentEvent},
+    AdminCurrentEvents: {screen: AdminCurrentEvents},
+ 
+    AdminEventDetails: {screen: AdminEventDetails},
+    AdminAttendance: {screen: AdminAttendance},
+    AdminWeeklyMeetings: {screen: AdminWeeklyMeetings},
+    AdminAddMeeting: {screen: AdminAddMeeting},
+    AdminEventTeams: {screen: AdminEventTeams},
+    AdminEditAttendance: {screen: AdminEditAttendance},
+    AdminCurrentEventSignups: {screen: AdminCurrentEventSignups},
+    
   },
   {
     headerMode: 'none',
@@ -114,7 +138,8 @@ CalendarStack.navigationOptions = {
 
 const AboutStack = createStackNavigator({
     AdminAbout: { screen: AdminAbout },
-    
+    AdminChapterOfficers: {screen: AdminChapterOfficers},
+    AdminAddChapterOfficer: {screen: AdminAddChapterOfficer}
 },
 {
   headerMode: 'none',

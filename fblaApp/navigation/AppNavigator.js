@@ -10,8 +10,8 @@ import AuthSignUpAdmin from '../screens/Auth/AuthSignUpAdmin';
 //import AuthTabNavigator from '../screens/Auth/AuthTabNavigator';
 import MemberTabNavigator from '../screens/Member/MemberTabNavigator.js';
 import AdminTabNavigator from '../screens/Admin/AdminTabNavigator.js';
-
-import Terms from '../screens/Auth/Terms';
+import OnBoardingScreen from '../screens/OnBoardingScreen.js';
+import Terms from '../screens/Auth/Terms.js';
 
 
 const AuthStack = createStackNavigator({
@@ -35,6 +35,7 @@ const AuthStack = createStackNavigator({
 export default createAppContainer(createSwitchNavigator(
     {
       AuthLoading: {screen: AuthLoading},
+      OnBoardingScreen: {screen: OnBoardingScreen},
       AuthStack: AuthStack,
       MemberTabNavigator: {screen: MemberTabNavigator},
       AdminTabNavigator: {screen: AdminTabNavigator}

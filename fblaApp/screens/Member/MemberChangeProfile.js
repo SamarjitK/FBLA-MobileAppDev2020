@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Dimensions, Text, ScrollView } from 'react-native'
+import { View, Dimensions, Text, ScrollView, Alert } from 'react-native'
 import { Header, Icon, FormInput, FormValidationMessage, } from 'react-native-elements';
 import {Button, Card, CardItem} from 'native-base'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
@@ -22,6 +22,23 @@ export default class MemberChangeProfile extends React.Component {
         this.setState({selectedIndex})
       }
       
+      onExit=()=>{
+        Alert.alert(
+          //title
+          'Are you sure you want to exit?',
+          //body
+          'Your changes have not saved.',
+          [
+            { text: 'No', style: 'cancel', },
+            { text: 'Yes', onPress: () => this.props.navigation.navigate('MemberSettings'), style: 'cancel' },
+            
+          ],
+          { cancelable: false }
+          //clicking out side of alert will not cancel
+        );
+        
+      }
+
       render () {
         const buttons = ['Member', 'Admin']
         const { selectedIndex } = this.state
@@ -41,7 +58,7 @@ export default class MemberChangeProfile extends React.Component {
                 </Button>
                 } 
                 leftComponent ={
-                    <Button transparent style = {styles.authBackButton} onPress={() => this.props.navigation.navigate('MemberHome')}>
+                    <Button transparent style = {styles.authBackButton} onPress={() => this.onExit()} >
                       <Icon style = {{height:25, width:25}} name = 'ios-arrow-back' type='ionicon' color='white' />
                     </Button>
                 }
@@ -51,7 +68,7 @@ export default class MemberChangeProfile extends React.Component {
                     </View>      
                 }
                 rightComponent ={
-                  <Button transparent style = {{ justifyContent: 'center', alignItems: 'center', marginTop: 40}} onPress={() => this.props.navigation.navigate('MemberHome')}>
+                  <Button transparent style = {{ justifyContent: 'center', alignItems: 'center', marginTop: 40}} onPress={() => this.props.navigation.navigate('MemberSettings')} >
                       <Text style = {{fontSize:18, color:'white', fontWeight: '500'}}>Save</Text>
                   </Button>
                   } 
@@ -101,10 +118,11 @@ export default class MemberChangeProfile extends React.Component {
                                 fontSize: 16,
                                 marginHorizontal: 10,
                                 marginTop: 5,
-                                color: 'gray'
+                                color: 'black'
+                                
                             }}
-                            placeholder={''}
-                            placeholderTextColor={'gray'}
+                            placeholder={'Sahil'}
+                            placeholderTextColor={'black'}
 
                         />
                         <FormValidationMessage></FormValidationMessage>
@@ -130,10 +148,11 @@ export default class MemberChangeProfile extends React.Component {
                                 fontSize: 16,
                                 marginHorizontal: 10,
                                 marginTop: 5,
-                                color: 'gray'
+                                color: 'black'
+                                
                             }}
-                            placeholder={''}
-                            placeholderTextColor={'gray'}
+                            placeholder={'Kancherla'}
+                            placeholderTextColor={'black'}
 
                         />
                         <FormValidationMessage></FormValidationMessage>
@@ -159,10 +178,11 @@ export default class MemberChangeProfile extends React.Component {
                                 fontSize: 16,
                                 marginHorizontal: 10,
                                 marginTop: 5,
-                                color: 'gray'
+                                color: 'black'
+                                
                             }}
-                            placeholder={''}
-                            placeholderTextColor={'gray'}
+                            placeholder={'s-skancherla@lwsd.org'}
+                            placeholderTextColor={'black'}
 
                         />
                         <FormValidationMessage></FormValidationMessage>
@@ -186,10 +206,11 @@ export default class MemberChangeProfile extends React.Component {
                                 fontSize: 16,
                                 marginHorizontal: 10,
                                 marginTop: 5,
-                                color: 'gray'
+                                color: 'black'
+                                
                             }}
-                            placeholder={''}
-                            placeholderTextColor={'gray'}
+                            placeholder={'11'}
+                            placeholderTextColor={'black'}
 
                         />
                         <FormValidationMessage></FormValidationMessage>
@@ -215,10 +236,11 @@ export default class MemberChangeProfile extends React.Component {
                                 fontSize: 16,
                                 marginHorizontal: 10,
                                 marginTop: 5,
-                                color: 'gray'
+                                color: 'black'
+                                
                             }}
-                            placeholder={''}
-                            placeholderTextColor={'gray'}
+                            placeholder={'Tesla STEM High School - FBLA'}
+                            placeholderTextColor={'black'}
 
                         />
                         <FormValidationMessage></FormValidationMessage>
@@ -244,10 +266,11 @@ export default class MemberChangeProfile extends React.Component {
                                 fontSize: 16,
                                 marginHorizontal: 10,
                                 marginTop: 5,
-                                color: 'gray'
+                                color: 'black'
+                                
                             }}
-                            placeholder={''}
-                            placeholderTextColor={'gray'}
+                            placeholder={'Medium'}
+                            placeholderTextColor={'black'}
 
                         />
                         <FormValidationMessage></FormValidationMessage>
@@ -281,9 +304,9 @@ export default class MemberChangeProfile extends React.Component {
                                 fontSize: 16,
                                 marginHorizontal: 10,
                                 marginTop: 5,
-                                color: 'gray'
+                                color: 'black'
                             }}
-                            placeholder={''}
+                            placeholder={'Enter old password'}
                             placeholderTextColor={'gray'}
                             secureTextEntry={true}
                         />
@@ -313,7 +336,7 @@ export default class MemberChangeProfile extends React.Component {
                         
                         <Text>   Must include a symbol or number and have at</Text>
                         {"\n"}
-                        <Text>   least 8 characters</Text>
+                        <Text>   least 6 characters</Text>
                         </Text>
 
                         <FormInput
@@ -321,9 +344,9 @@ export default class MemberChangeProfile extends React.Component {
                                 fontSize: 16,
                                 marginHorizontal: 10,
                                 marginTop: 5,
-                                color: 'gray'
+                                color: 'black'
                             }}
-                            placeholder={''}
+                            placeholder={'Enter new password'}
                             placeholderTextColor={'gray'}
                             secureTextEntry={true}
                         />
@@ -350,9 +373,9 @@ export default class MemberChangeProfile extends React.Component {
                                 fontSize: 16,
                                 marginHorizontal: 10,
                                 marginTop: 5,
-                                color: 'gray'
+                                color: 'black'
                             }}
-                            placeholder={''}
+                            placeholder={'Confirm new password'}
                             placeholderTextColor={'gray'}
                             secureTextEntry={true}
                         />
